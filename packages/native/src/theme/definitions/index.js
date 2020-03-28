@@ -5,4 +5,4 @@ const theme = { ...colors,
   ...fonts,
   ...layout
 };
-export default theme;
+export { theme };
