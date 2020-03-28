@@ -42,5 +42,5 @@
     "@babel/preset-react": "7.8.3",
     "babel-plugin-emotion": "10.0.29"
   },
-  "gitHead": "5926d5196cca68c860ef3db284729bf59db48891"
+  "gitHead": "01bf29faa00e1984ea89b642314b651e6afbd6de"
 }

@@ -1,3 +1,3 @@
-import killerWink from '@UI/packages/native/theme';
+import killerWink from '@UI/native';
 
 export default killerWink;

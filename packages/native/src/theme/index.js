@@ -1,5 +1,5 @@
 import { ThemeProvider } from 'emotion-theming';
-import defaultTheme from '@UI/packages/native/theme/definitions';
+import defaultTheme from './definitions';
 
 const killerWink = ({theme, children}) => {
     return (

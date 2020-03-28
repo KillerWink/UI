@@ -1,2 +1,2 @@
-import killerWink from '@UI/packages/native/theme';
+import killerWink from './theme';
 export { killerWink };
