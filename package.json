@@ -2,8 +2,9 @@
   "name": "root",
   "private": true,
   "scripts": {
-    "build": "lerna exec --scope web --stream -- babel src --out-dir dist",
+    "build": "lerna exec --scope @killerui/web --stream -- babel src --out-dir dist",
     "test": "jest",
+    "prerelease": "npm run build",
     "release": "lerna publish"
   },
   "devDependencies": {
