@@ -5,13 +5,13 @@
   "author": "Thomas Gambina <thomas.gambina@gmail.com> (http://killerwink.com/)",
   "homepage": "https://github.com/KillerWink/UI#readme",
   "license": "ISC",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "directories": {
     "lib": "src",
     "test": "__tests__"
   },
   "files": [
-    "src"
+    "dist"
   ],
   "repository": {
     "type": "git",
@@ -35,5 +35,5 @@
     "@emotion/styled": "10.0.27",
     "emotion-theming": "10.0.27"
   },
-  "gitHead": "4256e84867e3ab5ae5e395a4f4bf0848f4767a4a"
+  "gitHead": "5fe6bd42192b5d8920057bc18e2ec70404efeb97"
 }
