@@ -1,6 +1,6 @@
 {
   "name": "@killerui/web",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "web components",
   "keywords": [
     "web",
@@ -30,7 +30,7 @@
   "dependencies": {
     "@emotion/core": "10.0.28",
     "@emotion/styled": "10.0.27",
-    "@killerui/native": "^0.1.6",
+    "@killerui/native": "^0.1.7",
     "emotion-theming": "10.0.27"
   },
   "peerDependencies": {
