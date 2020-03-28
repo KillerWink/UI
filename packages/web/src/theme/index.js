@@ -1,3 +1,3 @@
-import killerWink from '@killerui/native';
+import { killerWink } from '@killerui/native';
 
 export default killerWink;
