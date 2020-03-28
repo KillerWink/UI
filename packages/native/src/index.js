@@ -1,2 +1,4 @@
 import killerWink from './theme';
-export { killerWink };
+import theme from './theme/definitions';
+
+export { killerWink, theme };

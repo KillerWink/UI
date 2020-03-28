@@ -2,10 +2,10 @@
   "name": "root",
   "private": true,
   "scripts": {
-    "build": "lerna exec --scope @killerui/web --stream -- babel src --out-dir dist",
+    "build": "lerna exec --stream -- babel src --out-dir dist",
     "test": "jest",
     "prerelease": "npm run build",
-    "release": "lerna publish"
+    "release": "lerna publish --contents dist"
   },
   "devDependencies": {
     "lerna": "^3.20.2"
