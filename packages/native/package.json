@@ -1,5 +1,5 @@
 {
-  "name": "native",
+  "name": "@killerui/native",
   "version": "0.1.0",
   "description": "> TODO: description",
   "author": "Thomas Gambina <thomas.gambina@gmail.com> (http://killerwink.com/)",
@@ -28,5 +28,6 @@
     "@emotion/native": "10.0.27",
     "@emotion/styled": "10.0.27",
     "emotion-theming": "10.0.27"
-  }
+  },
+  "gitHead": "5926d5196cca68c860ef3db284729bf59db48891"
 }

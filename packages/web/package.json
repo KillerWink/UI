@@ -1,5 +1,5 @@
 {
-  "name": "web",
+  "name": "@killerui/web",
   "version": "0.1.0",
   "description": "web components",
   "keywords": [
@@ -41,5 +41,6 @@
     "@babel/preset-env": "7.8.7",
     "@babel/preset-react": "7.8.3",
     "babel-plugin-emotion": "10.0.29"
-  }
+  },
+  "gitHead": "5926d5196cca68c860ef3db284729bf59db48891"
 }
