@@ -1,5 +1,5 @@
 {
-  "name": "@killerui",
+  "name": "killerui",
   "private": true,
   "scripts": {
     "build": "lerna exec --scope web --stream -- babel src --out-dir dist",
