@@ -2,7 +2,7 @@ import React from 'react';
 import { ThemeProvider } from 'emotion-theming';
 import defaultTheme from './definitions';
 
-const killerWink = ({theme, children}) => {
+const KillerWink = ({theme, children}) => {
     return (
         <ThemeProvider theme={{...theme, ...defaultTheme}}>
             {children}
@@ -10,4 +10,4 @@ const killerWink = ({theme, children}) => {
     );
 };
 
-export default killerWink;
+export default KillerWink;
