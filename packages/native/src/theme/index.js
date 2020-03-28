@@ -1,8 +1,8 @@
 import React from 'react';
 import { ThemeProvider } from 'emotion-theming';
-import defaultTheme from './definitions';
+import { theme as defaultTheme } from './definitions';
 
-const KillerWink = ({theme, children}) => {
+const KillerWink = ({children, theme = {}}) => {
     return (
         <ThemeProvider theme={{...theme, ...defaultTheme}}>
             {children}

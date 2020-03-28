@@ -4,7 +4,7 @@ import { theme as defaultTheme } from '@killerui/native';
 
 const KillerWink = ({children, theme = {}}) => {
     return (
-        <ThemeProvider theme={{...defaultTheme, ...theme}}>
+        <ThemeProvider theme={{...theme, ...defaultTheme}}>
             {children}
         </ThemeProvider>
     );
