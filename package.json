@@ -4,7 +4,6 @@
   "scripts": {
     "build": "lerna exec --scope web --stream -- babel src --out-dir dist",
     "test": "jest",
-    "prerelease": "npm run build",
     "release": "lerna publish"
   },
   "devDependencies": {
