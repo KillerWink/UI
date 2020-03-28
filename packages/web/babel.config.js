@@ -9,7 +9,6 @@ module.exports = function(api) {
                     '__tests__',
                 ],
             },
-        },
-        ignore: ['node_modules'],
+        }
     };
 };
