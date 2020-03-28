@@ -1,0 +1,32 @@
+{
+  "name": "native",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "Thomas Gambina <thomas.gambina@gmail.com> (http://killerwink.com/)",
+  "homepage": "https://github.com/KillerWink/UI#readme",
+  "license": "ISC",
+  "main": "src/index.js",
+  "directories": {
+    "lib": "src",
+    "test": "__tests__"
+  },
+  "files": [
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KillerWink/UI.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/KillerWink/UI/issues"
+  },
+  "dependencies": {
+    "@emotion/core": "10.0.28",
+    "@emotion/native": "10.0.27",
+    "@emotion/styled": "10.0.27",
+    "emotion-theming": "10.0.27"
+  }
+}
