@@ -1,5 +1,4 @@
-import KillerWink from './theme';
-import { theme } from './theme/definitions';
+import KillerWink from '@killerui/shared';
 import Header from './Header';
 
-export { KillerWink, theme, Header };
+export { KillerWink, Header };

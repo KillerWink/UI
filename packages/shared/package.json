@@ -1,0 +1,50 @@
+{
+  "name": "shared",
+  "version": "0.1.16",
+  "description": "shared code between web and native",
+  "keywords": [
+    "shared",
+    "code",
+    "between",
+    "web",
+    "and",
+    "native"
+  ],
+  "author": "Thomas Gambina <thomas.gambina@gmail.com> (http://killerwink.com/)",
+  "homepage": "https://github.com/KillerWink/UI#readme",
+  "license": "ISC",
+  "main": "dist/bundle.cjs.js",
+  "module": "dist/bundle.esm.js",
+  "directories": {
+    "lib": "src",
+    "test": "__tests__"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KillerWink/UI.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/KillerWink/UI/issues"
+  },
+  "peerDependencies": {
+    "prop-types": ">= 15.7.2",
+    "react": ">=16.3.0"
+  },
+  "devDependencies": {
+    "babel-plugin-emotion": "10.0.29",
+    "react": "^16.5.2"
+  },
+  "dependencies": {
+    "@emotion/core": "10.0.28",
+    "@emotion/native": "10.0.27",
+    "@emotion/styled": "10.0.27",
+    "emotion-theming": "10.0.27"
+  }
+}

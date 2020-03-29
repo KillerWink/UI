@@ -18,14 +18,13 @@ export default {
             format: 'esm'
         },
         {
-            name: '@killerui/web',
+            name: '@killerui/shared',
             file: `${dist}/bundle.umd.js`,
             format: 'umd',
             globals: {
                 'react': 'React',
                 '@emotion': '@emotion',
                 'emotion-theming': 'emotion-theming',
-                'prop-types': 'PropTypes'
             },
         },
     ],
@@ -40,5 +39,5 @@ export default {
             exclude: 'node_modules/**',
         })
     ],
-    external: ['react', '@emotion', 'emotion-theming', 'prop-types']
+    external: ['react', '@emotion', 'emotion-theming']
 };
