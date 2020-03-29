@@ -1,2 +1,4 @@
 import KillerWink from './theme';
-export { KillerWink };
+import Header from './Header';
+
+export { KillerWink, Header };

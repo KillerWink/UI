@@ -23,7 +23,9 @@ export default {
             globals: {
                 'react': 'React',
                 '@emotion': '@emotion',
-                'emotion-theming': 'emotion-theming'
+                'emotion-theming': 'emotion-theming',
+                'prop-types': 'PropTypes',
+                'react-native': 'react-native'
             },
         },
     ],
@@ -37,5 +39,5 @@ export default {
             exclude: 'node_modules/**',
         })
     ],
-    external: ['react', '@emotion', 'emotion-theming']
+    external: ['react', '@emotion', 'emotion-theming', 'prop-types', 'react-native']
 };

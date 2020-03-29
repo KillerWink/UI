@@ -24,7 +24,8 @@ export default {
                 'react': 'React',
                 '@killerui/native': 'native',
                 '@emotion': '@emotion',
-                'emotion-theming': 'emotion-theming'
+                'emotion-theming': 'emotion-theming',
+                'prop-types': 'PropTypes'
             },
         },
     ],
@@ -38,5 +39,5 @@ export default {
             exclude: 'node_modules/**',
         })
     ],
-    external: ['react', '@emotion', '@killerui/native', 'emotion-theming']
+    external: ['react', '@emotion', '@killerui/native', 'emotion-theming', 'prop-types']
 };

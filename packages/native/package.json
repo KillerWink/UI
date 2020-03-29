@@ -26,11 +26,15 @@
     "url": "https://github.com/KillerWink/UI/issues"
   },
   "peerDependencies": {
-    "react": ">=16.3.0"
+    "react": ">=16.3.0",
+    "prop-types": ">= 15.7.2",
+    "react-native": ">= 0.60.0"
   },
   "devDependencies": {
     "babel-plugin-emotion": "10.0.29",
-    "react": "^16.5.2"
+    "react": "^16.5.2",
+    "prop-types": "^15.7.2",
+    "react-native": "^0.61.5"
   },
   "dependencies": {
     "@emotion/core": "10.0.28",
