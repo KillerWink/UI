@@ -5,13 +5,15 @@
   "author": "Thomas Gambina <thomas.gambina@gmail.com> (http://killerwink.com/)",
   "homepage": "https://github.com/KillerWink/UI#readme",
   "license": "ISC",
-  "main": "dist/index.js",
+  "main": "dist/bundle.cjs.js",
+  "module": "dist/bundle.esm.js",
   "directories": {
     "lib": "src",
     "test": "__tests__"
   },
   "files": [
-    "dist"
+    "dist",
+    "src"
   ],
   "repository": {
     "type": "git",
@@ -27,7 +29,8 @@
     "react": ">=16.3.0"
   },
   "devDependencies": {
-    "react": "^16.5.2"
+    "react": "^16.5.2",
+    "babel-plugin-emotion": "10.0.29"
   },
   "dependencies": {
     "@emotion/core": "10.0.28",
