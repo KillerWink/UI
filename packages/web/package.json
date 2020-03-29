@@ -1,6 +1,6 @@
 {
   "name": "@killerui/web",
-  "version": "0.1.14",
+  "version": "0.1.15",
   "description": "web components",
   "keywords": [
     "web",
@@ -32,17 +32,17 @@
   "dependencies": {
     "@emotion/core": "10.0.28",
     "@emotion/styled": "10.0.27",
-    "@killerui/native": "^0.1.14",
+    "@killerui/native": "^0.1.15",
     "emotion-theming": "10.0.27"
   },
   "peerDependencies": {
-    "react": ">=16.3.0",
-    "prop-types": ">= 15.7.2"
+    "prop-types": ">= 15.7.2",
+    "react": ">=16.3.0"
   },
   "devDependencies": {
     "babel-plugin-emotion": "10.0.29",
-    "react": "^16.5.2",
-    "prop-types": "^15.7.2"
+    "prop-types": "^15.7.2",
+    "react": "^16.5.2"
   },
   "gitHead": "5fe6bd42192b5d8920057bc18e2ec70404efeb97"
 }
