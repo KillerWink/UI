@@ -25,7 +25,8 @@ export default {
                 'react': 'React',
                 '@emotion': '@emotion',
                 'emotion-theming': 'emotion-theming',
-                'prop-types': 'PropTypes'
+                'prop-types': 'PropTypes',
+                '@killerui/shared': '@killerui/shared'
             },
         },
     ],
@@ -40,5 +41,5 @@ export default {
             exclude: 'node_modules/**',
         })
     ],
-    external: ['react', '@emotion', 'emotion-theming', 'prop-types']
+    external: ['react', '@emotion', 'emotion-theming', 'prop-types', '@killerui/shared']
 };
