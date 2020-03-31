@@ -23,10 +23,11 @@ export default {
             format: 'umd',
             globals: {
                 'react': 'React',
-                '@emotion': '@emotion',
+                '@emotion/native': '@emotion/native',
                 'emotion-theming': 'emotion-theming',
                 'prop-types': 'PropTypes',
-                'react-native': 'react-native'
+                'react-native': 'react-native',
+                'react-native-reanimated': 'react-native-reanimated'
             },
         },
     ],
@@ -41,5 +42,5 @@ export default {
             exclude: 'node_modules/**',
         })
     ],
-    external: ['react', '@emotion', 'emotion-theming', 'prop-types', 'react-native']
+    external: ['react', '@emotion/native', 'emotion-theming', 'prop-types', 'react-native', 'react-native-reanimated']
 };
