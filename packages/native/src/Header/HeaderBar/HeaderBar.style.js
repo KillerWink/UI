@@ -1,8 +1,8 @@
 import styled from '@emotion/native';
 
 export const HeaderWrapper = styled.View`
-    alignItems: center;
-    justifyContent: flex-end;
+    align-items: center;
+    justify-content: flex-end;
     height: 80px;
     padding: ${props => props.theme.padding}px;
     padding-top: ${props => props.theme.padding}px;
@@ -11,7 +11,7 @@ export const HeaderWrapper = styled.View`
 
 export const HeaderContainer = styled.View`
     flex: 1;
-    alignItems: stretch;
-    justifyContent: center;
-    flexDirection: row;
+    align-items: stretch;
+    justify-content: center;
+    flex-direction: row;
 `;
