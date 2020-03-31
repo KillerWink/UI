@@ -4,8 +4,8 @@ export const HeaderWrapper = styled.View`
     align-items: center;
     justify-content: flex-end;
     height: 80px;
-    padding: ${props => props.theme.padding}px;
-    padding-top: ${props => props.theme.padding}px;
+    padding: ${props => props.theme.padding};
+    padding-top: ${props => props.theme.padding};
     background-color: ${props => props.theme.color1};
 `;
 

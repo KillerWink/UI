@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useTheme } from 'emotion-theming';
 import { HeaderWrapper, HeaderContainer } from './HeaderBar.style';
-import { StatusBarComponent } from '../StatusBar/StatusBar';
+import { StatusBarComponent } from '../StatusBar';
 
-const HeaderBar = ({options : { StatusBarOptions = {} }, children}) => {
+const HeaderBar = ({ StatusBarOptions = {}, children}) => {
     const theme = useTheme();
     return (
         <HeaderWrapper theme={theme}>
