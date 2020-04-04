@@ -27,7 +27,8 @@ export default {
                 'emotion-theming': 'emotion-theming',
                 'prop-types': 'PropTypes',
                 'react-native': 'react-native',
-                'react-native-reanimated': 'react-native-reanimated'
+                'react-native-reanimated': 'react-native-reanimated',
+                'react-native-gesture-handler': 'react-native-gesture-handler'
             },
         },
     ],
@@ -42,5 +43,13 @@ export default {
             exclude: 'node_modules/**',
         })
     ],
-    external: ['react', '@emotion/native', 'emotion-theming', 'prop-types', 'react-native', 'react-native-reanimated']
+    external: [
+        'react',
+        '@emotion/native',
+        'emotion-theming',
+        'prop-types',
+        'react-native',
+        'react-native-reanimated',
+        'react-native-gesture-handler'
+    ]
 };
