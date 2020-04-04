@@ -1,16 +1,30 @@
 import React from 'react';
+import { Dimensions } from 'react-native';
 import Animated from 'react-native-reanimated';
 import { DEFAULT_PROPS_SCROLLABLE } from './config';
+import Header from '../Header';
 
 const { cond, set, lessThan } = Animated;
 
-const HeaderScrollable = ({ options = {}, children }) => {
+const ScrollProperties = {
+    position: 'absolute',
+    zIndex: 11,
+    width: '100%',
+};
 
-    const {
-        scrollDistance = DEFAULT_PROPS_SCROLLABLE.scrollDistance,
-    } = options;
+const parseHeight = (setHeight) => {
+    const { height } = Dimensions.get('window');
+    const heightInt = parseInt(setHeight);
+    return Number.isInteger(setHeight) ? setHeight : (height * (heightInt/100));
+};
 
-    const headerDiffClamp = Animated.diffClamp(set(reanimatedScroll, cond(lessThan(reanimatedScroll, 0), 0, reanimatedScroll)), 0, scrollDistance);
+const HeaderScrollable = ({ style = {}, children }) => {
+
+    const scrollDistance = style.height ? parseHeight(style.height) : DEFAULT_PROPS_SCROLLABLE.scrollDistance;
+
+    const headerDiffClamp = Animated.diffClamp(set(reanimatedScroll,
+            cond(lessThan(reanimatedScroll, 0), 0, reanimatedScroll)
+        ), 0, scrollDistance);
 
     const headerTranslate = Animated.interpolate(headerDiffClamp, {
         inputRange: [0, scrollDistance],
@@ -19,14 +33,15 @@ const HeaderScrollable = ({ options = {}, children }) => {
     });
 
     return (
-        <Animated.View
-            style={{
+        <Header
+            styles={{
                 transform: [{translateY: headerTranslate}],
-                height: 0,
+                ...ScrollProperties,
+                ...style
             }}
         >
-            {children}
-        </Animated.View>
+                {children}
+        </Header>
     );
 };
 

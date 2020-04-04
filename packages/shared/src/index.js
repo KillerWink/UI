@@ -1,4 +1,4 @@
-import KillerWink from './theme';
+import ThemeWrapper from './theme';
 import { theme } from './theme/definitions';
 
-export { KillerWink, theme };
+export { ThemeWrapper, theme };

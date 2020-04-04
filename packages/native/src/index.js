@@ -1,5 +1,6 @@
-import { KillerWink } from '@killerui/shared';
-import ScrollView from './ScrollView';
+import Bootstrap from './Bootstrap';
+import HeaderScrollable from './HeaderScrollable';
+import ScrollerView from './ScrollView';
 import Header from './Header';
 
-export { KillerWink, Header, ScrollView };
+export { Bootstrap, Header, ScrollerView, HeaderScrollable };

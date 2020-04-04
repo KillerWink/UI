@@ -4,10 +4,10 @@ import { useTheme } from 'emotion-theming';
 import { HeaderWrapper, HeaderContainer } from './HeaderBar.style';
 import { StatusBarComponent } from '../StatusBar';
 
-const HeaderBar = ({ StatusBarOptions = {}, children}) => {
+const HeaderBar = ({ StatusBarOptions = {}, children, styles }) => {
     const theme = useTheme();
     return (
-        <HeaderWrapper theme={theme}>
+        <HeaderWrapper theme={theme} styles={styles}>
             <StatusBarComponent options={StatusBarOptions} />
             <HeaderContainer>
                 {children}

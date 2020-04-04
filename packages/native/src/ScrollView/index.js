@@ -1,17 +1,15 @@
-import { KillerWink } from '@killerui/shared';
 import React, { Component } from 'react';
 import Animated from 'react-native-reanimated';
 import PropTypes from 'prop-types';
 
-const { call, event, Value } = Animated;
+const { event, Value } = Animated;
 
 global.reanimatedScroll = new Value(0);
 
-class ScrollView extends Component {
+class ScrollerView extends Component {
 
     constructor(props) {
         super(props);
-        this.handleScroll = this.handleScroll.bind(this);
         this.scroller = React.createRef();
         this.onScroll = event(
             [{ nativeEvent: { contentOffset: { y: reanimatedScroll } } }]
@@ -24,6 +22,7 @@ class ScrollView extends Component {
                 ref={this.scroller}
                 scrollEventTrottle={16}
                 onScroll={this.onScroll}
+                { ...this.props }
             >
                     {this.props.children}
             </Animated.ScrollView>
@@ -31,9 +30,9 @@ class ScrollView extends Component {
     }
 }
 
-ScrollContainer.propTypes = {
+ScrollerView.propTypes = {
     children: PropTypes.node,
     headerHeight: PropTypes.number,
 };
 
-export default ScrollView;
+export default ScrollerView;

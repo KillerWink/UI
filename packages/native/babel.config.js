@@ -8,7 +8,7 @@ module.exports = function(api) {
                 "node" : 8
             }
         }], "@babel/preset-react"],
-        plugins: ["emotion"],
+        plugins: ["emotion", "@babel/plugin-proposal-class-properties"],
         env: {
             build: {
                 ignore: [
