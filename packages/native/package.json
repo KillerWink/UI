@@ -1,6 +1,6 @@
 {
   "name": "@killerui/native",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "> TODO: description",
   "author": "Thomas Gambina <thomas.gambina@gmail.com> (http://killerwink.com/)",
   "homepage": "https://github.com/KillerWink/UI#readme",
@@ -40,7 +40,7 @@
     "@emotion/core": "10.0.28",
     "@emotion/native": "10.0.27",
     "@emotion/styled": "10.0.27",
-    "@killerui/shared": "^0.3.0",
+    "@killerui/shared": "^0.4.0",
     "@react-navigation/native": "5.1.4",
     "@react-navigation/stack": "5.2.9",
     "emotion-theming": "10.0.27",
