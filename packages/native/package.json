@@ -46,6 +46,7 @@
     "emotion-theming": "10.0.27",
     "react-native-gesture-handler": "1.6.1",
     "react-native-reanimated": "1.7.1",
+    "react-native-safe-area-context": "0.7.3",
     "react-native-shared-element": "0.6.1",
     "react-navigation-shared-element": "5.0.0-alpha1"
   },
