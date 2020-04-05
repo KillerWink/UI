@@ -33,7 +33,8 @@ export default {
                 '@react-navigation/stack': '@react-navigation/stack',
                 'react-native-shared-element': 'react-native-shared-element',
                 'react-navigation-shared-element': 'react-navigation-shared-element',
-                'react-native-safe-area-context': 'react-native-safe-area-context'
+                'react-native-safe-area-context': 'react-native-safe-area-context',
+                '@react-native-community/masked-view': '@react-native-community/masked-view'
             },
         },
     ],
@@ -60,6 +61,7 @@ export default {
         '@react-navigation/stack',
         'react-native-shared-element',
         'react-navigation-shared-element',
-        'react-native-safe-area-context'
+        'react-native-safe-area-context',
+        '@react-native-community/masked-view'
     ]
 };
