@@ -28,7 +28,11 @@ export default {
                 'prop-types': 'PropTypes',
                 'react-native': 'react-native',
                 'react-native-reanimated': 'react-native-reanimated',
-                'react-native-gesture-handler': 'react-native-gesture-handler'
+                'react-native-gesture-handler': 'react-native-gesture-handler',
+                '@react-navigation/native': '@react-navigation/native',
+                '@react-navigation/stack': '@react-navigation/stack',
+                'react-native-shared-element': 'react-native-shared-element',
+                'react-navigation-shared-element': 'react-navigation-shared-element'
             },
         },
     ],
@@ -50,6 +54,10 @@ export default {
         'prop-types',
         'react-native',
         'react-native-reanimated',
-        'react-native-gesture-handler'
+        'react-native-gesture-handler',
+        '@react-navigation/native',
+        '@react-navigation/stack',
+        'react-native-shared-element',
+        'react-navigation-shared-element'
     ]
 };
