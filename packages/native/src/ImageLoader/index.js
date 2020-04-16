@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ImageLoaderWrapper, ImagePreload, ImageComponent } from './ImageLoader.style';
+import loader from './assets/loader.json';
 
 
 const ImageLoader = ({ imageUrl }) => {
@@ -8,7 +9,7 @@ const ImageLoader = ({ imageUrl }) => {
 
     return (
         <ImageLoaderWrapper theme={theme} styles={styles}>
-            { showImage || <ImagePreload showImage={showImage} source={require('./assets/loader.json')} autoPlay loop /> }
+            { showImage || <ImagePreload showImage={showImage} source={loader} autoPlay loop /> }
             <ImageComponent
                 style={styles.stretch}
                 source={{ uri: imageUrl }}
