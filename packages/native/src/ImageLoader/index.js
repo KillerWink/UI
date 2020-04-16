@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import { ImageLoaderWrapper, ImagePreload, ImageComponent } from './ImageLoader.style';
 import loader from './assets/loader.json';
 
@@ -21,10 +22,7 @@ const ImageLoader = ({ imageUrl }) => {
 };
 
 ImageLoader.propTypes = {
-    image: PropTypes.string,
-    title: PropTypes.node,
-    details: PropTypes.node,
-    styles: PropTypes.object,
+    imageUrl: PropTypes.string,
 };
 
 export default ImageLoader;
