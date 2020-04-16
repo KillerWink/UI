@@ -1,6 +1,6 @@
 {
   "name": "@killerui/native",
-  "version": "0.4.3",
+  "version": "0.5.0",
   "description": "> TODO: description",
   "author": "Thomas Gambina <thomas.gambina@gmail.com> (http://killerwink.com/)",
   "homepage": "https://github.com/KillerWink/UI#readme",
@@ -40,7 +40,7 @@
     "@emotion/core": "10.0.28",
     "@emotion/native": "10.0.27",
     "@emotion/styled": "10.0.27",
-    "@killerui/shared": "^0.4.0",
+    "@killerui/shared": "^0.5.0",
     "@react-native-community/masked-view": "0.1.7",
     "emotion-theming": "10.0.27",
     "lottie-ios": "3.1.3",
