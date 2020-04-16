@@ -37,13 +37,13 @@ export default {
         },
     ],
     plugins: [
+        json(),
         resolve({
             extensions: ['.js', '.json']
         }),
         commonjs({
             include: /node_modules/
         }),
-        json(),
         babel({
             runtimeHelpers: true,
             exclude: 'node_modules/**',
