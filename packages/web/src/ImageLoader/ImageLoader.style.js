@@ -1,5 +1,4 @@
-import styled from '@emotion/native';
-import LottieView from 'lottie-react-native';
+import styled from '@emotion/styled';
 
 export const ImageLoaderWrapper = styled.div`
     flex: 1;
@@ -7,7 +6,7 @@ export const ImageLoaderWrapper = styled.div`
     justify-content: center;
 `;
 
-export const ImagePreload = styled(LottieView)`
+export const ImagePreload = styled.div`
     flex: 1;
     align-items: stretch;
     justify-content: center;

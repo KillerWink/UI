@@ -29,13 +29,10 @@ export default {
                 'react-native': 'react-native',
                 'react-native-reanimated': 'react-native-reanimated',
                 'react-native-gesture-handler': 'react-native-gesture-handler',
-                '@react-navigation/native': '@react-navigation/native',
-                '@react-navigation/stack': '@react-navigation/stack',
-                'react-native-shared-element': 'react-native-shared-element',
-                'react-navigation-shared-element': 'react-navigation-shared-element',
                 'react-native-safe-area-context': 'react-native-safe-area-context',
                 '@react-native-community/masked-view': '@react-native-community/masked-view',
-                'react-native-screens': 'react-native-screens'
+                'lottie-ios' : 'lottie-ios',
+                'lottie-react-native' : 'lottie-react-native'
             },
         },
     ],
@@ -58,12 +55,9 @@ export default {
         'react-native',
         'react-native-reanimated',
         'react-native-gesture-handler',
-        '@react-navigation/native',
-        '@react-navigation/stack',
-        'react-native-shared-element',
-        'react-navigation-shared-element',
         'react-native-safe-area-context',
         '@react-native-community/masked-view',
-        'react-native-screens'
+        'lottie-ios',
+        'lottie-react-native'
     ]
 };

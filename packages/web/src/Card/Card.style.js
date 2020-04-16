@@ -1,4 +1,4 @@
-import styled from '@emotion/native';
+import styled from '@emotion/styled';
 
 export const CardWrapper = styled.div`
     alignItems: stretch;
