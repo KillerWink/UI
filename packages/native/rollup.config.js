@@ -39,7 +39,7 @@ export default {
     plugins: [
         json(),
         resolve({
-            extensions: ['.js', '.json']
+            extensions: ['.js', '.jsx', '.json']
         }),
         commonjs({
             include: /node_modules/
