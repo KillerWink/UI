@@ -15,7 +15,6 @@ export const ImagePreload = styled(LottieView)`
 
 export const ImageComponent = styled.Image`
     flex: 1;
-    align-items: start;
     justify-content: center;
     opacity: ${props => props.showImage ? 1 : 0};
 `;

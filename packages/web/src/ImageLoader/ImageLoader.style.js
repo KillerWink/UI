@@ -14,7 +14,8 @@ export const ImagePreload = styled.div`
 
 export const ImageComponent = styled.img`
     flex: 1;
-    align-items: start;
+    align-items: flex-start;
     justify-content: center;
+    object-fit: cover;
     opacity: ${props => props.showImage ? 1 : 0};
 `;

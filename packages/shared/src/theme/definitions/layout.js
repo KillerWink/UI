@@ -1,6 +1,6 @@
 const layout = {
   margin: '20px',
   padding: '10px',
-  border: '8px'
+  borderRadius: '8px'
 };
 export default layout;

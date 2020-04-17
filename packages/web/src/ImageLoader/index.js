@@ -30,11 +30,10 @@ const ImageLoader = ({ imageUrl }) => {
 
     return (
         <ImageLoaderWrapper theme={theme} styles={styles}>
-            { showImage || <ImagePreload ref={animBox} /> }
+            { !showImage && <ImagePreload ref={animBox} /> }
             <ImageComponent
-                style={styles.stretch}
                 src={imageUrl}
-                onLoad={setShowImage(true)}
+                onLoad={() => setShowImage(true)}
                 showImage={showImage}
             />
         </ImageLoaderWrapper>

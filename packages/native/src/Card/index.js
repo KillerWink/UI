@@ -2,24 +2,38 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useTheme } from 'emotion-theming';
 import ImageLoader from '../ImageLoader';
-import { CardWrapper, CardImage, CardTextWrapper, CardTextTitle, CardTextDetails } from './Card.style';
+import { CardWrapper, CardImage, CardTextTitle, CardTextDetails } from './Card.style';
 
-const Card = ({ imageUrl, title, details, styles }) => {
+const Card = ({ children, styles }) => {
     const theme = useTheme();
     return (
         <CardWrapper theme={theme} styles={styles}>
-            <CardImage>
-                <ImageLoader imageUrl={imageUrl} />
-            </CardImage>
-            <CardTextWrapper>
-                <CardTextTitle>
-                    {title}
-                </CardTextTitle>
-                <CardTextDetails>
-                    {details}
-                </CardTextDetails>
-            </CardTextWrapper>
+            {children}
         </CardWrapper>
+    );
+};
+
+Card.Image = ({imageUrl}) => {
+    return (
+        <CardImage>
+            <ImageLoader imageUrl={imageUrl} />
+        </CardImage>
+    );
+};
+
+Card.Title = ({children}) => {
+    return (
+        <CardTextTitle>
+            {children}
+        </CardTextTitle>
+    );
+};
+
+Card.Details = ({children}) => {
+    return (
+        <CardTextDetails>
+            {children}
+        </CardTextDetails>
     );
 };
 
