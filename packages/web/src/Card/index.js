@@ -14,8 +14,9 @@ const Card = ({ children, styles }) => {
 };
 
 Card.Image = ({imageUrl}) => {
+    const theme = useTheme();
     return (
-        <CardImage>
+        <CardImage theme={theme}>
             <ImageLoader imageUrl={imageUrl} />
         </CardImage>
     );

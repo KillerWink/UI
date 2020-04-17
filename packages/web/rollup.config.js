@@ -26,7 +26,7 @@ export default {
                 '@emotion': '@emotion',
                 'emotion-theming': 'emotion-theming',
                 'prop-types': 'PropTypes',
-                'lottie-web': 'lottie-web'
+                'react-lottie': 'react-lottie'
             },
         },
     ],
@@ -43,5 +43,5 @@ export default {
             exclude: 'node_modules/**',
         })
     ],
-    external: ['react', '@emotion', 'emotion-theming', 'prop-types', 'lottie-web']
+    external: ['react', '@emotion', 'emotion-theming', 'prop-types', 'react-lottie']
 };

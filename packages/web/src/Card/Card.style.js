@@ -4,6 +4,7 @@ export const CardWrapper = styled.div`
     alignItems: stretch;
     justify-content: center;
     min-height: 220px;
+    max-width: 400px;
     margin: ${props => props.theme.margin} 0;
     ${props => props.styles};
 `;

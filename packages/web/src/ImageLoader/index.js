@@ -1,36 +1,31 @@
-import React, { useState, useEffect } from 'react';
-import lottie from 'lottie-web';
+import React, { useState, useEffect, useRef } from 'react';
+import PropTypes from 'prop-types';
+import { useTheme } from 'emotion-theming';
+import Lottie from 'react-lottie';
 import loader from './assets/loader.json'
-import { ImageLoaderWrapper, ImagePreload, ImageComponent } from './ImageLoader.style';
+import { ImageLoaderWrapper, ImageComponent } from './ImageLoader.style';
 
 
-const ImageLoader = ({ imageUrl }) => {
+const ImageLoader = ({ imageUrl, styles = {} }) => {
     const theme = useTheme();
     const [showImage, setShowImage] = useState(false);
 
-    const animBox = useRef();
-
-    const animObj = lottie.loadAnimation({
-        container: animBox,
-        renderer: 'svg',
+    const defaultOptions = {
         loop: true,
         autoplay: true,
-        animationData: loader
-    });
-
-    useEffect(
-        () => {
-            animObj.play();
-            return () => {
-                animObj.stop();
-            };
-        },
-        [],
-    );
+        animationData: loader,
+        rendererSettings: {
+            preserveAspectRatio: 'xMidYMid slice'
+        }
+    };
 
     return (
         <ImageLoaderWrapper theme={theme} styles={styles}>
-            { !showImage && <ImagePreload ref={animBox} /> }
+            { !showImage &&
+            <Lottie options={defaultOptions}
+                    height={'100%'}
+                    width={'100%'}  />
+            }
             <ImageComponent
                 src={imageUrl}
                 onLoad={() => setShowImage(true)}
