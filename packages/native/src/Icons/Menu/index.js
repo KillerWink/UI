@@ -6,11 +6,11 @@ import hamburger from './hamburger.json';
 
 const Menu = ({ color = '#5E5E5E' }) => {
 
-    const menu = useRef();
+    const menuRef = useRef();
 
     return (
         <LottieView
-            ref={menu}
+            ref={menuRef}
             style={{
                 width: '100%',
                 height: '100%'

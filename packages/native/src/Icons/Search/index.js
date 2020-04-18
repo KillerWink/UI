@@ -6,11 +6,11 @@ import search from './search.json';
 
 const Search = ({ color = '#5E5E5E' }) => {
 
-    const search = useRef();
+    const searchRef = useRef();
 
     return (
         <LottieView
-            ref={search}
+            ref={searchRef}
             style={{
                 width: '100%',
                 height: '100%'

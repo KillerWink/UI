@@ -6,11 +6,11 @@ import star from './star.json';
 
 const Star = ({ color = '#5E5E5E' }) => {
 
-    const star = useRef();
+    const starRef = useRef();
 
     return (
         <LottieView
-            ref={star}
+            ref={starRef}
             style={{
                 width: '100%',
                 height: '100%'

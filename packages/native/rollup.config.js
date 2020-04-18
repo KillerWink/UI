@@ -33,7 +33,7 @@ export default {
                 '@react-native-community/masked-view': '@react-native-community/masked-view',
                 'lottie-ios' : 'lottie-ios',
                 'lottie-react-native' : 'lottie-react-native',
-                '@killerwink/lottie-react-native-color' : '@killerwink/lottie-react-native-color'
+                '@killerwink/react-lottie-color' : '@killerwink/react-lottie-color'
             },
         },
     ],
@@ -62,6 +62,6 @@ export default {
         '@react-native-community/masked-view',
         'lottie-ios',
         'lottie-react-native',
-        '@killerwink/lottie-react-native-color'
+        '@killerwink/react-lottie-color'
     ]
 };

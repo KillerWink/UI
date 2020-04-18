@@ -6,11 +6,11 @@ import backSvg from './back-button.json';
 
 const Back = ({ color = '#5E5E5E' }) => {
 
-    const back = useRef();
+    const backRef = useRef();
 
     return (
         <LottieView
-            ref={back}
+            ref={backRef}
             style={{
                 width: '100%',
                 height: '100%'
