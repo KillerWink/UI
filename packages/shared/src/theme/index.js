@@ -4,7 +4,7 @@ import { theme as defaultTheme } from './definitions';
 
 const ThemeWrapper = ({children, theme = {}}) => {
     return (
-        <ThemeProvider theme={{...theme, ...defaultTheme}}>
+        <ThemeProvider theme={{...defaultTheme, ...theme}}>
             {children}
         </ThemeProvider>
     );

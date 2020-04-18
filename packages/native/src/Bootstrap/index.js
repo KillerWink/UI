@@ -1,9 +1,9 @@
 import React from 'react';
 import { ThemeWrapper } from '@killerui/shared';
 
-const Bootstrap = ({ children }) => {
+const Bootstrap = ({ children, theme }) => {
     return (
-        <ThemeWrapper>
+        <ThemeWrapper theme={theme}>
             {children}
         </ThemeWrapper>
     );

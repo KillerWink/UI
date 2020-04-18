@@ -2,9 +2,9 @@ import React from 'react';
 import { ThemeWrapper } from '@killerui/shared';
 import { Wrapper } from './Bootstrap.style';
 
-const Bootstrap = ({ children }) => {
+const Bootstrap = ({ children, theme = {} }) => {
     return (
-        <ThemeWrapper>
+        <ThemeWrapper theme={theme}>
             <Wrapper>
                 {children}
             </Wrapper>

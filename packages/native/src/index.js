@@ -5,6 +5,7 @@ import Header from './Header';
 import HorizontalScroller from './HorizontalScroller';
 import ImageLoader from './ImageLoader';
 import Card from './Card';
+import { H1, H2, H3, P, Span } from './Text';
 
 export {
     Bootstrap,
@@ -13,5 +14,10 @@ export {
     HeaderScrollable,
     HorizontalScroller,
     ImageLoader,
-    Card
+    Card,
+    H1,
+    H2,
+    H3,
+    P,
+    Span
 };
