@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
 import LottieView from "lottie-react-native";
-import changeSVGColor from '@killerwink/lottie-react-color';
+import changeSVGColor from '@killerwink/react-lottie-color';
 import hamburger from './hamburger.json';
 
 const Menu = ({ color = '#5E5E5E' }) => {

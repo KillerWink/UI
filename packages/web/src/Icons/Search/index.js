@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Lottie from 'react-lottie';
-import changeSVGColor from '@killerwink/lottie-react-color';
+import changeSVGColor from '@killerwink/react-lottie-color';
 import search from './search.json';
 
 const Search = ({ color = '#5E5E5E' }) => {
