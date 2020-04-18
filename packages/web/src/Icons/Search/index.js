@@ -4,7 +4,7 @@ import Lottie from 'react-lottie';
 import changeSVGColor from '@killerwink/lottie-react-native-color';
 import search from './search.json';
 
-const Search = ({ color }) => {
+const Search = ({ color = '#5E5E5E' }) => {
 
     const defaultOptions = {
         animationData: changeSVGColor(search, color),

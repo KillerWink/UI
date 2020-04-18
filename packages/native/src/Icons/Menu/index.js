@@ -4,7 +4,7 @@ import LottieView from "lottie-react-native";
 import changeSVGColor from '@killerwink/lottie-react-native-color';
 import hamburger from './hamburger.json';
 
-const Menu = ({ color }) => {
+const Menu = ({ color = '#5E5E5E' }) => {
 
     const menu = useRef();
 

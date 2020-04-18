@@ -4,7 +4,7 @@ import LottieView from "lottie-react-native";
 import changeSVGColor from '@killerwink/lottie-react-native-color';
 import search from './search.json';
 
-const Search = ({ color }) => {
+const Search = ({ color = '#5E5E5E' }) => {
 
     const search = useRef();
 

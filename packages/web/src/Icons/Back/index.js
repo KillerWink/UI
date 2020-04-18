@@ -4,7 +4,7 @@ import Lottie from 'react-lottie';
 import changeSVGColor from '@killerwink/lottie-react-native-color';
 import backSvg from './back-button.json';
 
-const Back = ({ color }) => {
+const Back = ({ color = '#5E5E5E' }) => {
 
     const defaultOptions = {
         animationData: changeSVGColor(backSvg, color),

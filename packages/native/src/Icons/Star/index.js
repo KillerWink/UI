@@ -4,7 +4,7 @@ import LottieView from "lottie-react-native";
 import changeSVGColor from '@killerwink/lottie-react-native-color';
 import star from './star.json';
 
-const Star = ({ color }) => {
+const Star = ({ color = '#5E5E5E' }) => {
 
     const star = useRef();
 
