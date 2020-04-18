@@ -26,7 +26,8 @@ export default {
                 '@emotion': '@emotion',
                 'emotion-theming': 'emotion-theming',
                 'prop-types': 'PropTypes',
-                'react-lottie': 'react-lottie'
+                'react-lottie': 'react-lottie',
+                '@killerwink/lottie-react-native-color': '@killerwink/lottie-react-native-color'
             },
         },
     ],
@@ -43,5 +44,12 @@ export default {
             exclude: 'node_modules/**',
         })
     ],
-    external: ['react', '@emotion', 'emotion-theming', 'prop-types', 'react-lottie']
+    external: [
+        'react',
+        '@emotion',
+        'emotion-theming',
+        'prop-types',
+        'react-lottie',
+        '@killerwink/lottie-react-native-color'
+    ]
 };

@@ -32,7 +32,8 @@ export default {
                 'react-native-safe-area-context': 'react-native-safe-area-context',
                 '@react-native-community/masked-view': '@react-native-community/masked-view',
                 'lottie-ios' : 'lottie-ios',
-                'lottie-react-native' : 'lottie-react-native'
+                'lottie-react-native' : 'lottie-react-native',
+                '@killerwink/lottie-react-native-color' : '@killerwink/lottie-react-native-color'
             },
         },
     ],
@@ -60,6 +61,7 @@ export default {
         'react-native-safe-area-context',
         '@react-native-community/masked-view',
         'lottie-ios',
-        'lottie-react-native'
+        'lottie-react-native',
+        '@killerwink/lottie-react-native-color'
     ]
 };
