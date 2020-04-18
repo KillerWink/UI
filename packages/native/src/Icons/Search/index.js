@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
 import LottieView from "lottie-react-native";
-import changeSVGColor from '@killerwink/lottie-react-native-color';
+import changeSVGColor from '@killerwink/lottie-react-color';
 import search from './search.json';
 
 const Search = ({ color = '#5E5E5E' }) => {
