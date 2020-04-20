@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import { useTheme } from 'emotion-theming';
 import { H1 } from './Text.style';
 
-const H1Text = ({ children, styles }) => {
+const H1Text = ({ children, style }) => {
     const theme = useTheme();
     return (
-        <H1 theme={theme} styles={styles}>
+        <H1 theme={theme} style={style}>
             {children}
         </H1>
     );
@@ -14,7 +14,7 @@ const H1Text = ({ children, styles }) => {
 
 H1Text.propTypes = {
     children: PropTypes.string,
-    styles: PropTypes.object,
+    style: PropTypes.object,
 };
 
 export default H1Text;

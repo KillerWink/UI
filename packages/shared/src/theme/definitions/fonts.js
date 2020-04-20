@@ -1,5 +1,5 @@
 const fonts = {
-    small: '12px',
+    small: '16px',
     medium: '24px',
     large: '36px',
     fontFamily1: '',

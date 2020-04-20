@@ -7,6 +7,8 @@ import hamburger from './hamburger.json';
 const Menu = ({ color = '#5E5E5E' }) => {
 
     const defaultOptions = {
+        loop: false,
+        autoplay: false,
         animationData: changeSVGColor(hamburger, color),
         rendererSettings: {
             preserveAspectRatio: 'xMidYMid slice'

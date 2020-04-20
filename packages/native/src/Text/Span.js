@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import { useTheme } from 'emotion-theming';
 import { Span } from './Text.style';
 
-const SpanText = ({ children, styles }) => {
+const SpanText = ({ children, style }) => {
     const theme = useTheme();
     return (
-        <Span theme={theme} styles={styles}>
+        <Span theme={theme} style={style}>
             {children}
         </Span>
     );
@@ -14,7 +14,7 @@ const SpanText = ({ children, styles }) => {
 
 SpanText.propTypes = {
     children: PropTypes.string,
-    styles: PropTypes.object,
+    style: PropTypes.object,
 };
 
 export default SpanText;

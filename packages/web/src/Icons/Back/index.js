@@ -7,6 +7,8 @@ import backSvg from './back-button.json';
 const Back = ({ color = '#5E5E5E' }) => {
 
     const defaultOptions = {
+        loop: false,
+        autoplay: false,
         animationData: changeSVGColor(backSvg, color),
         rendererSettings: {
             preserveAspectRatio: 'xMidYMid slice'

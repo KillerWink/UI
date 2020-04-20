@@ -7,6 +7,8 @@ import star from './star.json';
 const Star = ({ color = '#5E5E5E' }) => {
 
     const defaultOptions = {
+        loop: false,
+        autoplay: false,
         animationData: changeSVGColor(star, color),
         rendererSettings: {
             preserveAspectRatio: 'xMidYMid slice'

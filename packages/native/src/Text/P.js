@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import { useTheme } from 'emotion-theming';
 import { P } from './Text.style';
 
-const pText = ({ children, styles }) => {
+const pText = ({ children, style }) => {
     const theme = useTheme();
     return (
-        <P theme={theme} styles={styles}>
+        <P theme={theme} style={style}>
             {children}
         </P>
     );
@@ -14,7 +14,7 @@ const pText = ({ children, styles }) => {
 
 pText.propTypes = {
     children: PropTypes.string,
-    styles: PropTypes.object,
+    style: PropTypes.object,
 };
 
 export default pText;

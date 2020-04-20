@@ -7,6 +7,8 @@ import search from './search.json';
 const Search = ({ color = '#5E5E5E' }) => {
 
     const defaultOptions = {
+        loop: false,
+        autoplay: false,
         animationData: changeSVGColor(search, color),
         rendererSettings: {
             preserveAspectRatio: 'xMidYMid slice'
