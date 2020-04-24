@@ -6,7 +6,8 @@ import ImageLoader from './ImageLoader';
 import Card from './Card';
 import { H1, H2, H3, P, Span } from './Text';
 import Icons from './Icons';
-import Button from './Button'
+import Button from './Button';
+import Input from './Input';
 
 export {
     Bootstrap,
@@ -21,5 +22,6 @@ export {
     P,
     Span,
     Icons,
-    Button
+    Button,
+    Input
 };

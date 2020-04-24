@@ -8,6 +8,8 @@ import Card from './Card';
 import { H1, H2, H3, P, Span } from './Text';
 import Icons from './Icons';
 import Button from './Button';
+import Input from './Input';
+import BottomNavBar from './BottomNavBar';
 
 export {
     Bootstrap,
@@ -23,5 +25,7 @@ export {
     P,
     Span,
     Icons,
-    Button
+    Button,
+    Input,
+    BottomNavBar
 };

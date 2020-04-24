@@ -6,36 +6,36 @@ import Menu from './Menu';
 import Search from './Search';
 import Star from './Star';
 
-const Icons = ({ children, styles }) => {
+const Icons = ({ children, size = "small", style }) => {
     const theme = useTheme();
     return (
-        <IconWrapper theme={theme} styles={styles}>
+        <IconWrapper theme={theme} size={size} style={style}>
             {children}
         </IconWrapper>
     );
 };
 
-Icons.Back = () => {
+Icons.Back = ({color}) => {
     return (
-        <Back />
+        <Back color={color} />
     );
 };
 
-Icons.Menu = () => {
+Icons.Menu = ({color}) => {
     return (
-        <Menu />
+        <Menu color={color} />
     );
 };
 
-Icons.Search = () => {
+Icons.Search = ({color}) => {
     return (
-        <Search />
+        <Search color={color} />
     );
 };
 
-Icons.Star = () => {
+Icons.Star = ({color}) => {
     return (
-        <Star />
+        <Star color={color} />
     );
 };
 

@@ -6,13 +6,13 @@ import button from './button.json';
 import { ButtonAnimationWrapper } from './ButtonAnimated.style';
 
 const ButtonAnimated = ({ children, color, styles }) => {
-    const backRef = useRef();
+    const buttonRef = useRef();
     const theme = useTheme();
 
     return (
         <ButtonAnimationWrapper theme={theme} styles={styles}>
             <LottieView
-                ref={backRef}
+                ref={buttonRef}
                 style={{
                     width: '100%',
                     height: '100%',
