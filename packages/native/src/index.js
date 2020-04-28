@@ -10,6 +10,9 @@ import Icons from './Icons';
 import Button from './Button';
 import Input from './Input';
 import BottomNavBar from './BottomNavBar';
+import Calendar from './Calendar';
+import TimePicker from './TimePicker';
+import Pax from './Pax';
 
 export {
     Bootstrap,
@@ -27,5 +30,8 @@ export {
     Icons,
     Button,
     Input,
-    BottomNavBar
+    BottomNavBar,
+    Calendar,
+    TimePicker,
+    Pax
 };
