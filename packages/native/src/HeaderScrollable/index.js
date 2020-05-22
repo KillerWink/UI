@@ -18,12 +18,12 @@ const parseHeight = (setHeight) => {
     return Number.isInteger(setHeight) ? setHeight : (height * (heightInt/100));
 };
 
-const HeaderScrollable = ({ style = {}, children }) => {
+const HeaderScrollable = ({ globalScroll, style = {}, children }) => {
 
     const scrollDistance = style.height ? parseHeight(style.height) : DEFAULT_PROPS_SCROLLABLE.scrollDistance;
 
-    const headerDiffClamp = Animated.diffClamp(set(reanimatedScroll,
-            cond(lessThan(reanimatedScroll, 0), 0, reanimatedScroll)
+    const headerDiffClamp = Animated.diffClamp(set(globalScroll,
+            cond(lessThan(globalScroll, 0), 0, globalScroll)
         ), 0, scrollDistance);
 
     const headerTranslate = Animated.interpolate(headerDiffClamp, {
@@ -34,7 +34,7 @@ const HeaderScrollable = ({ style = {}, children }) => {
 
     return (
         <Header
-            styles={{
+            style={{
                 transform: [{translateY: headerTranslate}],
                 ...ScrollProperties,
                 ...style

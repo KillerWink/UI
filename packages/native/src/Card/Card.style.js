@@ -9,7 +9,7 @@ export const CardWrapper = styled.View`
 `;
 
 export const CardImage = styled.View`
-    height: 220px;
+    height: 200px;
     flex: 1;
     align-items: stretch;
     justify-content: center;

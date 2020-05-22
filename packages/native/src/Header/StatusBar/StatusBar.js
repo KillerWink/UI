@@ -8,13 +8,16 @@ export const StatusBarComponent = ({ options }) => {
         hidden = DEFAULT_PROPS_STATUS_BAR.hidden,
         barStyle = DEFAULT_PROPS_STATUS_BAR.barStyle,
         backgroundColor = DEFAULT_PROPS_STATUS_BAR.backgroundColor,
+        translucent = DEFAULT_PROPS_STATUS_BAR.translucent,
     } = options;
 
     return (
         <StatusBar
+            translucent={translucent}
             backgroundColor={backgroundColor}
             barStyle={barStyle}
             hidden={hidden}
+            animated={true}
         />
     );
 };

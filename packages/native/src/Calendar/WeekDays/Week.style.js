@@ -1,5 +1,12 @@
 import styled from '@emotion/native';
-import { H3 } from '../../Text';
+import { H3, H2 } from '../../Text';
+
+const backgroundSelector = ({isSelected, isActive, theme}) => {
+    if(isActive){
+        return isSelected ? theme.color2 : theme.color5
+    }
+    return theme.color8;
+};
 
 export const WeekDaysWrapper = styled.View`
     align-items: stretch;
@@ -13,8 +20,10 @@ export const WeekItemWrapper = styled.TouchableOpacity`
     justify-content: flex-start;
     flex-direction: row;
     padding: ${props => props.theme.padding} 0;
-    background-color: ${props => props.isSelected ? props.theme.color2 : '' };
-    border-radius: ${props => props.theme.borderRadius };
+    background-color: ${ props => backgroundSelector(props) };
+    border-radius: ${props => props.isActive && props.theme.borderRadius };
+    border-bottom-width: 1px;
+    border-color: ${props => props.theme.color8 };
     ${props => props.style};
 `;
 
@@ -35,5 +44,19 @@ export const MonthWrapper = styled.View`
 
 export const MonthText = styled(H3)`
     color: ${props => props.theme.color6 };
+    ${props => props.style};
+`;
+
+export const WeekHelpWrapper = styled.View`
+    align-items: stretch;
+    justify-content: flex-end;
+    flex-direction: row;
+    min-height: 20px;
+    padding: ${props => props.theme.padding};
+    ${props => props.style};
+`;
+
+export const WeekHelpText = styled(H3)`
+    color: ${props => props.theme.color1 };
     ${props => props.style};
 `;

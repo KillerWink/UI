@@ -3,6 +3,7 @@ import { View } from 'react-native';
 import { WeekDaysWrapper, LoadMore } from './Week.style';
 import WeekItem from './WeekItem';
 import MonthItem from './MonthItem';
+import WeekHelpItem from './WeekHelpItem';
 
 const WeekDays = ({ weekdays, WeekdayItems, style, LoadMoreItem }) => {
     const [ selectedState, setSelectedState ] = useState(false);
@@ -18,24 +19,35 @@ const WeekDays = ({ weekdays, WeekdayItems, style, LoadMoreItem }) => {
         return true;
     };
 
+    const returnWeek = ({week, index}) => {
+        if(weekdays[index - 1]){
+            return weekdays[index - 1].Week !== week;
+        }
+        return true;
+    };
+
     return (
         <WeekDaysWrapper style={style}>
             {
                 weekdays.map((weekDay, index) => {
                     return (
                         <View key={`${index}container`}>
-                        {
-                            returnMonth({month: weekDay.Month, index}) &&
-                            <MonthItem key={`${index}month`} month={weekDay.Month} />
-                        }
-                        <WeekItem
-                            key={index}
-                            setSelected={setSelected}
-                            index={index}
-                            WeekdayItems={WeekdayItems}
-                            weekDay={weekDay}
-                            selectedState={selectedState === index}
-                        />
+                            {
+                                returnMonth({month: weekDay.Month, index}) &&
+                                <MonthItem key={`${index}month`} month={weekDay.Month} />
+                            }
+                            {
+                                returnWeek({ week: weekDay.Week, index}) &&
+                                <WeekHelpItem key={`${index}week`} week={weekDay.Week} />
+                            }
+                            <WeekItem
+                                key={index}
+                                setSelected={setSelected}
+                                index={index}
+                                WeekdayItems={WeekdayItems}
+                                weekDay={weekDay}
+                                selectedState={selectedState === index}
+                            />
                         </View>
                     )
                 })

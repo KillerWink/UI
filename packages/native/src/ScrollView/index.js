@@ -4,15 +4,13 @@ import PropTypes from 'prop-types';
 
 const { event, Value } = Animated;
 
-global.reanimatedScroll = new Value(0);
-
 class ScrollerView extends Component {
 
     constructor(props) {
         super(props);
         this.scroller = React.createRef();
         this.onScroll = event(
-            [{ nativeEvent: { contentOffset: { y: reanimatedScroll } } }]
+            [{ nativeEvent: { contentOffset: { y: props.globalScroll } } }]
         );
     }
 

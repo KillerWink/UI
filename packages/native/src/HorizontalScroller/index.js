@@ -23,7 +23,6 @@ const HorizontalScroll = ({ preview = 0, children }) => {
                 showsHorizontalScrollIndicator={false}
                 snapToAlignment='center'
                 snapToOffsets={childPreviewWidth}
-                contentContainerStyle={{ paddingHorizontal: parseInt(theme.padding) }}
                 decelerationRate="fast"
             >
                 { React.Children.map(children, (child, index) => (
