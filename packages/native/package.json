@@ -1,6 +1,6 @@
 {
   "name": "@killerui/native",
-  "version": "0.11.2",
+  "version": "0.11.3",
   "description": "> TODO: description",
   "author": "Thomas Gambina <thomas.gambina@gmail.com> (http://killerwink.com/)",
   "homepage": "https://github.com/KillerWink/UI#readme",
@@ -26,11 +26,11 @@
     "url": "https://github.com/KillerWink/UI/issues"
   },
   "peerDependencies": {
+    "lottie-ios": ">=3.1.8",
+    "lottie-react-native": ">=3.3.2",
     "prop-types": ">= 15.7.2",
     "react": ">=16.3.0",
-    "react-native": ">= 0.60.0",
-    "lottie-react-native": ">=3.3.2",
-    "lottie-ios": ">=3.1.8"
+    "react-native": ">= 0.60.0"
   },
   "devDependencies": {
     "babel-plugin-emotion": "10.0.29",
