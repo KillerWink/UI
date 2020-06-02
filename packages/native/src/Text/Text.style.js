@@ -21,6 +21,8 @@ export const H3 = styled.Text`
     font-family: ${props => props.theme.fontFamily1};
     text-align: ${props => props.align};
     color: ${props => props.color || props.theme.color6};
+    height: ${props => props.theme.small};
+    lineHeight: ${props => props.theme.small};
     ${props => props.style};
 `;
 

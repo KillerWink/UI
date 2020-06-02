@@ -13,6 +13,7 @@ import BottomNavBar from './BottomNavBar';
 import Calendar from './Calendar';
 import TimePicker from './TimePicker';
 import Pax from './Pax';
+import { Margin, MarginHorizontal, MarginVertical } from './Helpers';
 
 export {
     Bootstrap,
@@ -33,5 +34,8 @@ export {
     BottomNavBar,
     Calendar,
     TimePicker,
-    Pax
+    Pax,
+    Margin,
+    MarginHorizontal,
+    MarginVertical,
 };

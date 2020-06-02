@@ -18,9 +18,9 @@ const parseHeight = (setHeight) => {
     return Number.isInteger(setHeight) ? setHeight : (height * (heightInt/100));
 };
 
-const HeaderScrollable = ({ globalScroll, style = {}, children }) => {
+const HeaderScrollable = ({ globalScroll, style = {}, children, scrollDistanceHeight, height }) => {
 
-    const scrollDistance = style.height ? parseHeight(style.height) : DEFAULT_PROPS_SCROLLABLE.scrollDistance;
+    const scrollDistance = scrollDistanceHeight ? scrollDistanceHeight : parseHeight(style.height);
 
     const headerDiffClamp = Animated.diffClamp(set(globalScroll,
             cond(lessThan(globalScroll, 0), 0, globalScroll)
@@ -39,6 +39,7 @@ const HeaderScrollable = ({ globalScroll, style = {}, children }) => {
                 ...ScrollProperties,
                 ...style
             }}
+            height={height}
         >
                 {children}
         </Header>

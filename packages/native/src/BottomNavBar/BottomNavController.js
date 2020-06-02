@@ -36,7 +36,7 @@ const BottomNavController = ({ state, descriptors, navigation, children }) => {
                         testID={options.tabBarTestID}
                         onPress={onPress}
                         onLongPress={onLongPress}
-                        style={{ flex: 1 }}
+                        style={{ alignSelf: 'stretch' }}
                         key={index}
                     >
                         <BottomNavItem isFocused={isFocused} TabElements={options.TabElements} />

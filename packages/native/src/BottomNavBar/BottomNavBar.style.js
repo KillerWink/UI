@@ -2,6 +2,7 @@ import styled from '@emotion/native';
 
 export const NavContainer = styled.View`
     flex-direction: row;
+    background-color: ${props => props.theme.color5};
 `;
 
 export const NavItemContainer = styled.View`
