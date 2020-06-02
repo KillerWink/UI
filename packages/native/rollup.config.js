@@ -31,6 +31,8 @@ export default {
                 'react-native-gesture-handler': 'react-native-gesture-handler',
                 'react-native-safe-area-context': 'react-native-safe-area-context',
                 '@react-native-community/masked-view': '@react-native-community/masked-view',
+                'lottie-ios' : 'lottie-ios',
+                'lottie-react-native' : 'lottie-react-native',
                 '@killerwink/react-lottie-color' : '@killerwink/react-lottie-color',
                 'react-native-svg' : 'react-native-svg',
                 'react-native-status-bar-height' : 'react-native-status-bar-height'
@@ -60,6 +62,8 @@ export default {
         'react-native-gesture-handler',
         'react-native-safe-area-context',
         '@react-native-community/masked-view',
+        'lottie-ios',
+        'lottie-react-native',
         '@killerwink/react-lottie-color',
         'react-native-svg',
         'react-native-status-bar-height'
