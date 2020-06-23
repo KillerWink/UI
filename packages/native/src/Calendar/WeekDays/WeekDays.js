@@ -5,11 +5,12 @@ import WeekItem from './WeekItem';
 import MonthItem from './MonthItem';
 import WeekHelpItem from './WeekHelpItem';
 
-const WeekDays = ({ weekdays, WeekdayItems, style, LoadMoreItem }) => {
+const WeekDays = ({ weekdays, WeekdayItems, style, LoadMoreItem, setActivitySelectedStep }) => {
     const [ selectedState, setSelectedState ] = useState(false);
 
-    const setSelected = (idx) => {
+    const setSelected = (idx, weekDay) => {
         setSelectedState(idx);
+        setActivitySelectedStep(weekDay);
     };
 
     const returnMonth = ({month, index}) => {
@@ -46,6 +47,7 @@ const WeekDays = ({ weekdays, WeekdayItems, style, LoadMoreItem }) => {
                                 index={index}
                                 WeekdayItems={WeekdayItems}
                                 weekDay={weekDay}
+                                setActivitySelectedStep={setActivitySelectedStep}
                                 selectedState={selectedState === index}
                             />
                         </View>

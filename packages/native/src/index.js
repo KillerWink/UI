@@ -14,6 +14,7 @@ import Calendar from './Calendar';
 import TimePicker from './TimePicker';
 import Pax from './Pax';
 import { Margin, MarginHorizontal, MarginVertical } from './Helpers';
+import List from './List';
 
 export {
     Bootstrap,
@@ -38,4 +39,5 @@ export {
     Margin,
     MarginHorizontal,
     MarginVertical,
+    List,
 };

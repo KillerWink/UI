@@ -12,7 +12,7 @@ const WeekItem = ({ weekDay, WeekdayItems, style, setSelected, selectedState, in
 
 
     return (
-        <WeekItemWrapper onPress={() => setSelected(index)} isSelected={selectedState} isActive={weekDay.active} theme={theme} style={style}>
+        <WeekItemWrapper onPress={() => setSelected(index, weekDay)} isSelected={selectedState} isActive={weekDay.active} theme={theme} style={style}>
             <WeekdayItems {...weekDay} />
         </WeekItemWrapper>
     );
