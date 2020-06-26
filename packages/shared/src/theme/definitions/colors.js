@@ -6,7 +6,8 @@ const colors = {
     color5: '#FFFFFF',
     color6: '#2d3436',
     color7: '#dfe6e9',
-    color8: '#FAF8F9',
+    color8: '#faf8f9',
     color9: '#b2bec3',
+    color10: '#375c7d',
 };
 export default colors;

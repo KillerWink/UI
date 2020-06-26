@@ -12,8 +12,8 @@ const Item = ({ item, ListItems, style, setSelected, selectedState, index, loadi
 
 
     return (
-        <ItemWrapper loading={loading} onPress={() => setSelected(index, item)} isSelected={selectedState} theme={theme} style={style}>
-            <ListItems {...item} />
+        <ItemWrapper loading={loading} onPress={() => setSelected(index, item)} isActive={item.active} isSelected={selectedState} theme={theme} style={style}>
+            <ListItems {...item} isSelected={selectedState} />
         </ItemWrapper>
     );
 };

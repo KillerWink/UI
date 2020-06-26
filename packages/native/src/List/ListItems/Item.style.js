@@ -3,9 +3,9 @@ import { H3, H2 } from '../../Text';
 
 const backgroundSelector = ({isSelected, isActive, theme}) => {
     if(isActive){
-        return isSelected ? theme.color2 : theme.color5
+        return isSelected ? theme.color1 : theme.color5
     }
-    return theme.color8;
+    return theme.color5;
 };
 
 export const ListItemsWrapper = styled.View`
@@ -24,7 +24,7 @@ export const ItemWrapper = styled.TouchableOpacity`
     background-color: ${ props => backgroundSelector(props) };
     border-radius: ${props => props.isActive && props.theme.borderRadius };
     border-bottom-width: 1px;
-    border-color: ${props => props.theme.color8 };
+    border-color: ${props => props.theme.color7 };
      ${props => props.loading
     &&
     `background-color: ${theme.color7};
@@ -45,7 +45,7 @@ export const DividerItem1Wrapper = styled.View`
     align-items: stretch;
     justify-content: flex-start;
     flex-direction: row;
-    padding: ${props => props.theme.padding};
+    padding: ${props => props.theme.margin};
     ${props => props.style};
 `;
 
@@ -58,8 +58,7 @@ export const DividerItem2Wrapper = styled.View`
     align-items: stretch;
     justify-content: flex-end;
     flex-direction: row;
-    min-height: 20px;
-    padding: ${props => props.theme.padding};
+    padding: ${props => props.theme.margin};
     ${props => props.style};
 `;
 
