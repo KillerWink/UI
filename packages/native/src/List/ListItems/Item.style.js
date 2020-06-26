@@ -24,7 +24,7 @@ export const ItemWrapper = styled.TouchableOpacity`
     background-color: ${ props => backgroundSelector(props) };
     border-radius: ${props => props.isActive && props.theme.borderRadius };
     border-bottom-width: 1px;
-    border-color: ${props => props.theme.color7 };
+    border-color: ${props => props.theme.color8 };
      ${props => props.loading
     &&
     `background-color: ${theme.color7};
