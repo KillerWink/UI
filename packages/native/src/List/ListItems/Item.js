@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useTheme } from 'emotion-theming';
 import { ItemWrapper } from './Item.style';
 
-const Item = ({ item, ListItems, style, setSelected, selectedState, index }) => {
+const Item = ({ item, ListItems, style, setSelected, selectedState, index, loading }) => {
     const theme = useTheme();
 
     useEffect(() => {
@@ -12,7 +12,7 @@ const Item = ({ item, ListItems, style, setSelected, selectedState, index }) => 
 
 
     return (
-        <ItemWrapper onPress={() => setSelected(index, item)} isSelected={selectedState} theme={theme} style={style}>
+        <ItemWrapper loading={loading} onPress={() => setSelected(index, item)} isSelected={selectedState} theme={theme} style={style}>
             <ListItems {...item} />
         </ItemWrapper>
     );

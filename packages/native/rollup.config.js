@@ -35,7 +35,8 @@ export default {
                 'lottie-react-native' : 'lottie-react-native',
                 '@killerwink/react-lottie-color' : '@killerwink/react-lottie-color',
                 'react-native-svg' : 'react-native-svg',
-                'react-native-status-bar-height' : 'react-native-status-bar-height'
+                'react-native-status-bar-height' : 'react-native-status-bar-height',
+                'reanimated-easing' : 'Easing'
             },
         },
     ],
@@ -59,6 +60,7 @@ export default {
         'prop-types',
         'react-native',
         'react-native-reanimated',
+        'reanimated-easing',
         'react-native-gesture-handler',
         'react-native-safe-area-context',
         '@react-native-community/masked-view',

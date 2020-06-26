@@ -4,8 +4,9 @@ import { ListItemsWrapper, LoadMore } from './Item.style';
 import Item from './Item';
 import DividerItem1 from './DividerItem1';
 import DividerItem2 from './DividerItem2';
+import AnimateItem from '../../AnimateList';
 
-const ListItems = ({ items, ListItems, style, LoadMoreItem, selectedFunction }) => {
+const ListItems = ({ items, ListItems, style, LoadMoreItem, selectedFunction, loading }) => {
     const [ selectedState, setSelectedState ] = useState(false);
 
     const setSelected = (idx, item) => {
@@ -32,7 +33,7 @@ const ListItems = ({ items, ListItems, style, LoadMoreItem, selectedFunction }) 
             {
                 items.map((item, index) => {
                     return (
-                        <View key={`${index}container`}>
+                        <AnimateItem duration={200 * (index + 1)} key={`${index}container`}>
                             {
                                 returnDivider1({ divider1: item.Divider1, index }) &&
                                 <DividerItem1 key={`${index}divider1`} divider1={item.Divider1} />
@@ -47,9 +48,10 @@ const ListItems = ({ items, ListItems, style, LoadMoreItem, selectedFunction }) 
                                 index={index}
                                 ListItems={ListItems}
                                 item={item}
+                                loading={loading}
                                 selectedState={selectedState === index}
                             />
-                        </View>
+                        </AnimateItem>
                     )
                 })
             }
