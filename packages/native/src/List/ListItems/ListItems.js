@@ -6,7 +6,7 @@ import DividerItem1 from './DividerItem1';
 import DividerItem2 from './DividerItem2';
 import AnimateItem from '../../AnimateList';
 
-const ListItems = ({ items, ListItems, style, LoadMoreItem, selectedFunction, loading }) => {
+const ListItems = ({ items, ListItems, style, LoadMoreItem, selectedFunction, loading, lineColor }) => {
     const [ selectedState, setSelectedState ] = useState(false);
 
     const setSelected = (idx, item) => {
@@ -28,19 +28,28 @@ const ListItems = ({ items, ListItems, style, LoadMoreItem, selectedFunction, lo
         return divider2 && true;
     };
 
+    const returnDivider2Prev = ({divider2, index}) => {
+        if(items[index + 1]){
+            return items[index + 1].Divider2 !== divider2;
+        }
+        return divider2 && true;
+    };
+
     return (
         <ListItemsWrapper style={style}>
             {
                 items.map((item, index) => {
+                    const dividerStepped = returnDivider2({ divider2: item.Divider2, index });
+                    //const prevDividerStepped = returnDivider2Prev({ divider2: item.Divider2, index });
                     return (
                         <AnimateItem duration={200 * (index + 1)} key={`${index}container`}>
                             {
                                 returnDivider1({ divider1: item.Divider1, index }) &&
-                                <DividerItem1 key={`${index}divider1`} divider1={item.Divider1} />
+                                <DividerItem1 lineColor={lineColor} shouldBeTransparent={dividerStepped} key={`${index}divider1`} divider1={item.Divider1} />
                             }
                             {
-                                returnDivider2({ divider2: item.Divider2, index }) &&
-                                <DividerItem2 key={`${index}divider2`} divider2={item.Divider2} />
+                                dividerStepped &&
+                                <DividerItem2 lineColor={lineColor} key={`${index}divider2`} divider2={item.Divider2} />
                             }
                             <Item
                                 key={index}
@@ -49,6 +58,9 @@ const ListItems = ({ items, ListItems, style, LoadMoreItem, selectedFunction, lo
                                 ListItems={ListItems}
                                 item={item}
                                 loading={loading}
+                                topCorners={dividerStepped}
+                                //bottomCorners={prevDividerStepped}
+                                lineColor={lineColor}
                                 selectedState={selectedState === index}
                             />
                         </AnimateItem>
