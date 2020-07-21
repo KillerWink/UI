@@ -1,17 +1,19 @@
-import React, { useState } from 'react';
-import { View } from 'react-native';
-import { ListItemsWrapper, LoadMore } from './Item.style';
+import React, { useState, useEffect } from 'react';
+import { FlatList, View } from 'react-native';
+import { ListItemsWrapper, LoadMore, ItemWrapperButton } from './Item.style';
 import Item from './Item';
 import DividerItem1 from './DividerItem1';
 import DividerItem2 from './DividerItem2';
-import AnimateItem from '../../AnimateList';
+import { AnimateItem, AnimateSelectedItem } from '../../AnimateList';
+import AnimationWrapper from './AnimationWrapper';
+import Animated from "react-native-reanimated";
 
-const ListItems = ({ items, ListItems, style, LoadMoreItem, selectedFunction, loading, lineColor }) => {
+const ListItems = ({ items, ListItems, style, ListFooterComponent, selectedFunction, loading, lineColor, ListHeaderComponent }) => {
     const [ selectedState, setSelectedState ] = useState(false);
 
     const setSelected = (idx, item) => {
-        setSelectedState(idx);
         selectedFunction(item);
+        setSelectedState(idx);
     };
 
     const returnDivider1 = ({divider1, index}) => {
@@ -28,52 +30,52 @@ const ListItems = ({ items, ListItems, style, LoadMoreItem, selectedFunction, lo
         return divider2 && true;
     };
 
+    /*
     const returnDivider2Prev = ({divider2, index}) => {
         if(items[index + 1]){
             return items[index + 1].Divider2 !== divider2;
         }
         return divider2 && true;
     };
+    */
 
-    return (
-        <ListItemsWrapper style={style}>
-            {
-                items.map((item, index) => {
-                    const dividerStepped = returnDivider2({ divider2: item.Divider2, index });
-                    //const prevDividerStepped = returnDivider2Prev({ divider2: item.Divider2, index });
-                    return (
-                        <AnimateItem duration={200 * (index + 1)} key={`${index}container`}>
-                            {
-                                returnDivider1({ divider1: item.Divider1, index }) &&
-                                <DividerItem1 lineColor={lineColor} shouldBeTransparent={dividerStepped} key={`${index}divider1`} divider1={item.Divider1} />
-                            }
-                            {
-                                dividerStepped &&
-                                <DividerItem2 lineColor={lineColor} key={`${index}divider2`} divider2={item.Divider2} />
-                            }
+    const renderItem = ({item, index}) => {
+        return (
+            <AnimationWrapper duration={100 * (index + 1 >= 20 ? 1 : index + 1)}>
+                {
+                    returnDivider1({ divider1: item.Divider1, index }) &&
+                    <DividerItem1 lineColor={lineColor} key={`${index}divider1`} divider1={item.Divider1} />
+                }
+                {
+                    returnDivider2({ divider2: item.Divider2, index }) &&
+                    <DividerItem2 lineColor={lineColor} key={`${index}divider2`} divider2={item.Divider2} />
+                }
+
                             <Item
-                                key={index}
-                                setSelected={setSelected}
                                 index={index}
                                 ListItems={ListItems}
                                 item={item}
-                                loading={loading}
-                                topCorners={dividerStepped}
-                                //bottomCorners={prevDividerStepped}
                                 lineColor={lineColor}
+                                setSelected={setSelected}
                                 selectedState={selectedState === index}
                             />
-                        </AnimateItem>
-                    )
-                })
-            }
-            {
-                LoadMoreItem && (
-                    <LoadMore>
-                        <LoadMoreItem />
-                    </LoadMore>
-                )
-            }
+
+            </AnimationWrapper>
+        );
+    };
+
+
+    return (
+        <ListItemsWrapper style={style}>
+        <FlatList
+            data={items}
+            style={{ paddingHorizontal: 15 }}
+            renderItem={renderItem}
+            keyExtractor={(item, index) => { return index.toString() }}
+            extraData={selectedState}
+            ListHeaderComponent={ListHeaderComponent}
+            ListFooterComponent={ListFooterComponent}
+        />
         </ListItemsWrapper>
     );
 };

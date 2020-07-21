@@ -1,7 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { useTheme } from 'emotion-theming';
 import LottieView from "lottie-react-native";
-import changeSVGColor from '@killerwink/react-lottie-color';
 import input from './input.json';
 import { InputAnimationWrapper, InputWrapper } from './InputAnimated.style';
 
@@ -21,7 +20,8 @@ const InputAnimated = ({ children, color, styles }) => {
                 }}
                 loop={false}
                 onLayout={(event) => setInputWidth(event.nativeEvent.layout.width)}
-                source={changeSVGColor(input, color)}
+                source={input}
+                colorFilters={[{ keypath: 'input', color: color }]}
             />
             {children}
             <InputWrapper width={inputWidth} />

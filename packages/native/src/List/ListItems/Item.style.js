@@ -35,25 +35,30 @@ export const ItemWrapperWithCorners = styled.TouchableOpacity`
     ${props => props.style};
 `;
 
-export const ItemWrapper = styled.TouchableOpacity`
+export const ItemWrapperButton = styled.TouchableWithoutFeedback`
+`;
+
+export const ItemWrapper = styled.View`
     align-content: flex-start;
     align-items: ${props => props.isSelected ? 'center' : 'flex-end' };
     justify-content: flex-start;
     flex-direction: row;
     padding: ${props => props.theme.padding} 0;
     background-color: ${ props => backgroundSelector(props) };
-    border-left-width: ${props => props.lineColor && '4px'};
+    margin-left: ${props => props.lineColor && '10px'};
+    border-left-width: ${props => props.lineColor && '3px'};
     border-color: ${props => props.lineColor && props.lineColor};
+    border-radius: ${props => props.isSelected ? '4px' : '0px' };
      ${props => props.loading
     &&
-    `background-color: ${theme.color7};
+    `background-color: ${props.theme.color7};
     min-height: 75px;
     `
 };
     ${props => props.style};
 `;
 
-export const LoadMore = styled.TouchableOpacity`
+export const LoadMore = styled.View`
     align-items: stretch;
     justify-content: flex-start;
     flex-direction: row;
@@ -64,10 +69,7 @@ export const DividerItem1Wrapper = styled.View`
     align-items: stretch;
     justify-content: flex-end;
     flex-direction: row;
-    padding: ${props => props.theme.margin};
-    background-color: ${ props => props.shouldBeTransparent ? '' : props.theme.color5 };
-    border-left-width: ${props => !props.shouldBeTransparent && props.lineColor ? '4px' : '0px'};
-    border-color: ${props => !props.shouldBeTransparent && props.lineColor ? props.lineColor : ''};
+    padding: 0 ${props => props.theme.margin};
     ${props => props.style};
 `;
 
@@ -80,15 +82,15 @@ export const DividerItem2Wrapper = styled.View`
     align-items: center;
     justify-content: flex-start;
     flex-direction: row;
-    padding: ${props => props.theme.padding} 0;
+    padding: ${props => props.theme.margin} 0;
     padding-bottom: 0;
-    margin-left: ${props => props.lineColor ? '-9px' : '0' };
     ${props => props.style};
 `;
 
 export const DividerItem2Text = styled(H3)`
     color: ${props => props.lineColor || props.theme.color1 };
-    padding: 0 ${props => props.theme.margin};
+    padding: 0 ${props => props.theme.padding};
+    margin-top: 5px;
     ${props => props.style};
 `;
 

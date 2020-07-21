@@ -3,13 +3,13 @@ import styled from '@emotion/native';
 export const CardWrapper = styled.View`
     alignItems: stretch;
     justify-content: center;
-    min-height: 220px;
+    min-height: 210px;
     margin: ${props => props.theme.margin} 0;
     ${props => props.styles};
 `;
 
 export const CardImage = styled.View`
-    height: 200px;
+    height: 190px;
     flex: 1;
     align-items: stretch;
     justify-content: center;

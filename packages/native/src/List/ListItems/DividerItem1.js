@@ -6,7 +6,7 @@ const DividerItem1 = ({ divider1, shouldBeTransparent, lineColor, style }) => {
     const theme = useTheme();
 
     return (
-        <DividerItem1Wrapper lineColor={lineColor} shouldBeTransparent={shouldBeTransparent} theme={theme}>
+        <DividerItem1Wrapper lineColor={lineColor} theme={theme}>
             <DividerItem1Text>{ divider1 }</DividerItem1Text>
         </DividerItem1Wrapper>
     );

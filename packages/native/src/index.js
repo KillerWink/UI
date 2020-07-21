@@ -15,6 +15,8 @@ import TimePicker from './TimePicker';
 import Pax from './Pax';
 import { Margin, MarginHorizontal, MarginVertical } from './Helpers';
 import List from './List';
+import { AnimateItem, AnimateSelectedItem } from './AnimateList';
+import FlatScrollerView from './FlatScroll';
 
 export {
     Bootstrap,
@@ -40,4 +42,7 @@ export {
     MarginHorizontal,
     MarginVertical,
     List,
+    AnimateItem,
+    AnimateSelectedItem,
+    FlatScrollerView
 };
