@@ -40,7 +40,8 @@
     "react": "^16.5.2",
     "react-native": "^0.61.5",
     "react-native-reanimated": ">= 1.9.0",
-    "reanimated-easing": ">= 1.1.1"
+    "reanimated-easing": ">= 1.1.1",
+    "react-native-gesture-handler": ">= 1.6.1"
   },
   "dependencies": {
     "@emotion/core": "10.0.28",
@@ -50,7 +51,6 @@
     "@killerwink/react-lottie-color": "1.0.1",
     "@react-native-community/masked-view": "0.1.7",
     "emotion-theming": "10.0.27",
-    "react-native-gesture-handler": "1.6.1",
     "react-native-maps": "0.27.1",
     "react-native-safe-area-context": "0.7.3",
     "react-native-status-bar-height": "^2.5.0",
