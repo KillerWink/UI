@@ -1,14 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { FlatList, View } from 'react-native';
-import { ListItemsWrapper, LoadMore, ItemWrapperButton } from './Item.style';
+import { ListItemsWrapper, GhostItem } from './Item.style';
 import Item from './Item';
 import DividerItem1 from './DividerItem1';
 import DividerItem2 from './DividerItem2';
-import { AnimateItem, AnimateSelectedItem } from '../../AnimateList';
 import AnimationWrapper from './AnimationWrapper';
-import Animated from "react-native-reanimated";
 
-const ListItems = ({ items, ListItems, style, ListFooterComponent, selectedFunction, loading, lineColor, ListHeaderComponent }) => {
+const GhostArray = [{},{},{},{},{},{},{},{},{}];
+const ListItems = ({ items, loading, ListItems, style, ListFooterComponent, selectedFunction, lineColor, ListHeaderComponent, selectedColor }) => {
     const [ selectedState, setSelectedState ] = useState(false);
 
     const setSelected = (idx, item) => {
@@ -51,25 +50,39 @@ const ListItems = ({ items, ListItems, style, ListFooterComponent, selectedFunct
                     <DividerItem2 lineColor={lineColor} key={`${index}divider2`} divider2={item.Divider2} />
                 }
 
-                            <Item
-                                index={index}
-                                ListItems={ListItems}
-                                item={item}
-                                lineColor={lineColor}
-                                setSelected={setSelected}
-                                selectedState={selectedState === index}
-                            />
+                <Item
+                    index={index}
+                    ListItems={ListItems}
+                    item={item}
+                    lineColor={lineColor}
+                    setSelected={setSelected}
+                    selectedColor={selectedColor}
+                    selectedState={selectedState === index}
+                />
 
             </AnimationWrapper>
         );
     };
+
+    if(loading) {
+        return (
+            <ListItemsWrapper style={style}>
+                <View style={{ paddingHorizontal: 12}}>
+                    <ListHeaderComponent />
+                </View>
+                {GhostArray.map((item, index) => (
+                    <GhostItem key={index} />
+                ))}
+            </ListItemsWrapper>
+        );
+    }
 
 
     return (
         <ListItemsWrapper style={style}>
         <FlatList
             data={items}
-            style={{ paddingHorizontal: 15 }}
+            style={{ paddingHorizontal: 15, marginRight: lineColor ? 5 : 0 }}
             renderItem={renderItem}
             keyExtractor={(item, index) => { return index.toString() }}
             extraData={selectedState}

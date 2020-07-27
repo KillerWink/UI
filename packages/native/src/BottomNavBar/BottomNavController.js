@@ -28,6 +28,10 @@ const BottomNavController = ({ state, descriptors, navigation, children }) => {
                     });
                 };
 
+                if(options.hide) {
+                    return null;
+                }
+
                 return (
                     <TouchableOpacity
                         accessibilityRole="button"

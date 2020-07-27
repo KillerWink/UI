@@ -4,7 +4,7 @@ import { useTheme } from 'emotion-theming';
 import { ItemWrapper, ItemWrapperButton } from './Item.style';
 import {AnimateSelectedItem} from "../../AnimateList";
 
-const Item = ({ item, ListItems, style, setSelected, selectedState, topCorners, bottomCorners = false, lineColor, index, loading }) => {
+const Item = ({ item, ListItems, style, setSelected, selectedState, topCorners, bottomCorners = false, lineColor, index, loading, selectedColor }) => {
     const theme = useTheme();
     const [ selectedStateChild, setSelectedStateChild ] = useState(selectedState);
     const [ animateChild, setAnimateChild ] = useState(true);
@@ -19,7 +19,7 @@ const Item = ({ item, ListItems, style, setSelected, selectedState, topCorners, 
     }, [selectedStateChild]);
 
     return (
-        <ItemWrapperButton onPress={() => setSelectedStateChild(index)}>
+        <ItemWrapperButton onPress={() => item.active && setSelectedStateChild(index)}>
             <View>
             <AnimateSelectedItem animate={animateChild} selectedState={selectedStateChild === index}>
             <ItemWrapper
@@ -31,6 +31,7 @@ const Item = ({ item, ListItems, style, setSelected, selectedState, topCorners, 
                 topCorners={topCorners}
                 bottomCorners={bottomCorners}
                 lineColor={lineColor}
+                selectedColor={selectedColor}
             >
                 <ListItems {...item} isSelected={selectedStateChild === index} />
             </ItemWrapper>
