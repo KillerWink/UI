@@ -3,6 +3,7 @@ import { Dimensions } from 'react-native';
 import Animated from 'react-native-reanimated';
 import { DEFAULT_PROPS_SCROLLABLE } from './config';
 import Header from '../Header';
+import { SafeAreaView } from 'react-native';
 
 const { cond, set, lessThan } = Animated;
 
@@ -33,6 +34,7 @@ const HeaderScrollable = ({ globalScroll, style = {}, children, scrollDistanceHe
     });
 
     return (
+        <SafeAreaView>
         <Header
             style={{
                 transform: [{translateY: headerTranslate}],
@@ -43,6 +45,7 @@ const HeaderScrollable = ({ globalScroll, style = {}, children, scrollDistanceHe
         >
                 {children}
         </Header>
+        </SafeAreaView>
     );
 };
 
