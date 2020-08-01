@@ -83,7 +83,7 @@ export const DividerItem2Wrapper = styled.View`
 `;
 
 export const DividerItem2Text = styled(H3)`
-    color: ${props => props.lineColor || props.theme.color1 };
+    color: ${props => props.lineColor || props.Divider2Color || props.theme.color1 };
     padding: 0 ${props => props.theme.padding};
     margin-top: 5px;
     ${props => props.style};

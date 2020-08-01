@@ -47,7 +47,7 @@ const ListItems = ({ items, loading, ListItems, style, ListFooterComponent, sele
                 }
                 {
                     returnDivider2({ divider2: item.Divider2, index }) &&
-                    <DividerItem2 lineColor={lineColor} key={`${index}divider2`} divider2={item.Divider2} />
+                    <DividerItem2 lineColor={lineColor} key={`${index}divider2`} divider2={item.Divider2} Divider2Color={item.Divider2Color || false} />
                 }
 
                 <Item
@@ -68,7 +68,7 @@ const ListItems = ({ items, loading, ListItems, style, ListFooterComponent, sele
         return (
             <ListItemsWrapper style={style}>
                 <View style={{ paddingHorizontal: 12}}>
-                    <ListHeaderComponent />
+                    { ListHeaderComponent && <ListHeaderComponent /> }
                 </View>
                 {GhostArray.map((item, index) => (
                     <GhostItem key={index} />

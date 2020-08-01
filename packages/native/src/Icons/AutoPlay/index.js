@@ -1,6 +1,5 @@
 import React, { useRef } from 'react';
 import LottieView from "lottie-react-native";
-import changeSVGColor from '@killerwink/react-lottie-color';
 
 const AutoPlay = ({ svg, color = '#5E5E5E' }) => {
 
@@ -15,7 +14,8 @@ const AutoPlay = ({ svg, color = '#5E5E5E' }) => {
             }}
             autoPlay={true}
             loop={true}
-            source={changeSVGColor(svg, color)}
+            colorFilters={color}
+            source={svg}
         />
     );
 };
