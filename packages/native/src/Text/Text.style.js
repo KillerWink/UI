@@ -26,6 +26,16 @@ export const H3 = styled.Text`
     ${props => props.style};
 `;
 
+export const H4 = styled.Text`
+    font-size: ${props => props.theme.xsmall};
+    font-family: ${props => props.theme.fontFamily1};
+    text-align: ${props => props.align};
+    color: ${props => props.color || props.theme.color6};
+    height: ${props => props.theme.small};
+    lineHeight: ${props => props.theme.small};
+    ${props => props.style};
+`;
+
 export const Span = styled.Text`
    font-size: ${props => props.theme.small};
    font-family: ${props => props.theme.fontFamily2};

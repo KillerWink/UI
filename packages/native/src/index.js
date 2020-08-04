@@ -5,7 +5,7 @@ import Header from './Header';
 import HorizontalScroller from './HorizontalScroller';
 import ImageLoader from './ImageLoader';
 import Card from './Card';
-import { H1, H2, H3, P, Span } from './Text';
+import { H1, H2, H3, H4, P, Span } from './Text';
 import Icons from './Icons';
 import Button from './Button';
 import Input from './Input';
@@ -29,6 +29,7 @@ export {
     H1,
     H2,
     H3,
+    H4,
     P,
     Span,
     Icons,
