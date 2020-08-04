@@ -1,6 +1,6 @@
 {
   "name": "@killerui/web",
-  "version": "0.12.3",
+  "version": "0.12.8",
   "description": "web components",
   "keywords": [
     "web",
@@ -32,7 +32,7 @@
   "dependencies": {
     "@emotion/core": "10.0.28",
     "@emotion/styled": "10.0.27",
-    "@killerui/shared": "^0.12.3",
+    "@killerui/shared": "^0.12.8",
     "@killerwink/react-lottie-color": "1.0.1",
     "emotion-theming": "10.0.27",
     "react-lottie": "1.2.3"
