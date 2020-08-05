@@ -16,6 +16,7 @@ export const InputBackground = styled.View`
     z-index:10;
     left: 35px;
     top: 35px;
+    opacity: ${props => props.hideIcon ? 0 : 1}
     ${props => props.style};
 `;
 

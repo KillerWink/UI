@@ -9,6 +9,7 @@ const InputAnimated = ({ hasError, textChange, style }) => {
     const searchRef = useRef();
     const [isFocused, setIsFocused] = useState(false);
     const [hasText, setHasText] = useState(false);
+    const [hideIcon, setHideIcon] = useState(false);
 
 
     useEffect(() => {
@@ -16,6 +17,7 @@ const InputAnimated = ({ hasError, textChange, style }) => {
            if(isFocused){
                searchRef.current.play(0, 15);
            }else{
+               setHideIcon(false);
                searchRef.current.play(15, 30);
            }
         }
@@ -24,7 +26,7 @@ const InputAnimated = ({ hasError, textChange, style }) => {
 
     return (
         <InputContainer theme={theme} styles={style}>
-            <InputBackground>
+            <InputBackground hideIcon={hideIcon}>
                 <LottieView
                     ref={searchRef}
                     style={{
@@ -32,7 +34,8 @@ const InputAnimated = ({ hasError, textChange, style }) => {
                         height: 'auto'
                     }}
                     loop={false}
-                    colorFilters={[{ keypath: 'search_animation', color: theme.color6 }]}
+                    colorFilters={[{keypath: 'search_animation', color: theme.color6}]}
+                    onAnimationFinish = {() => setHideIcon(hasText || isFocused)}
                     source={search}
                 />
             </InputBackground>
