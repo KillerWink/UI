@@ -1,6 +1,6 @@
 const fonts = {
     xsmall: '12px',
-    small: '16px',
+    small: '18px',
     medium: '24px',
     large: '36px',
     xlarge: '66px',

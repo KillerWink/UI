@@ -1,20 +1,25 @@
 import React from 'react';
+import { View } from 'react-native';
 import InputDefault from './InputDefault';
 import InputAnimated from './InputAnimated';
 
-const Input = ({ children, color = '#5E5E5E', style }) => {
+const Input = ({ children }) => {
     return (
-        <InputDefault color={color} style={style}>
+        <View>
             {children}
-        </InputDefault>
+        </View>
     );
 };
 
-Input.Animated = ({ children, color = '#5E5E5E', styles }) => {
+Input.Default = ({ hasError, textChange, style }) => {
     return (
-        <InputAnimated color={color} styles={styles}>
-            { children }
-        </InputAnimated>
+        <InputDefault hasError={hasError} textChange={textChange} style={style} />
+    );
+};
+
+Input.Search = ({ hasError, textChange, style }) => {
+    return (
+        <InputAnimated hasError={hasError} textChange={textChange} style={style} />
     );
 };
 

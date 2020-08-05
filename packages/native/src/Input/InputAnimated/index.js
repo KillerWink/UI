@@ -1,33 +1,55 @@
-import React, { useRef, useState } from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import { useTheme } from 'emotion-theming';
 import LottieView from "lottie-react-native";
-import input from './input.json';
-import { InputAnimationWrapper, InputWrapper, InputBackground } from './InputAnimated.style';
+import { InputContainer, Input, InputBackground } from './InputAnimated.style';
+import search from './searchani.json';
 
-const InputAnimated = ({ children, color, styles }) => {
-    const inputRef = useRef();
+const InputAnimated = ({ hasError, textChange, style }) => {
     const theme = useTheme();
-    const [inputWidth, setInputWidth] = useState();
+    const searchRef = useRef();
+    const [isFocused, setIsFocused] = useState(false);
+    const [hasText, setHasText] = useState(false);
+
+
+    useEffect(() => {
+        if(!hasText){
+           if(isFocused){
+               searchRef.current.play(0, 15);
+           }else{
+               searchRef.current.play(15, 30);
+           }
+        }
+    }, [isFocused]);
+
 
     return (
-        <InputAnimationWrapper theme={theme} styles={styles}>
+        <InputContainer theme={theme} styles={style}>
             <InputBackground>
-            <LottieView
-                ref={inputRef}
-                style={{
-                    height: '100%',
-                    position: 'absolute',
-                    zIndex: 0,
-                }}
-                loop={false}
-                onLayout={(event) => setInputWidth(event.nativeEvent.layout.width)}
-                source={input}
-                colorFilters={[{ keypath: 'input', color: color }]}
-            />
+                <LottieView
+                    ref={searchRef}
+                    style={{
+                        width: 20,
+                        height: 'auto',
+                        marginLeft: 1,
+                        marginTop: 1,
+                    }}
+                    loop={false}
+                    colorFilters={[{ keypath: 'search_animation', color: theme.color6 }]}
+                    source={search}
+                />
             </InputBackground>
-            {children}
-            <InputWrapper width={inputWidth} />
-        </InputAnimationWrapper>
+            <Input
+                theme={theme}
+                isFocused={isFocused}
+                hasError={hasError}
+                onChangeText={text => {
+                    textChange(text);
+                    setHasText(text || false);
+                }}
+                onFocus={() => setIsFocused(true)}
+                onBlur={() => setIsFocused(false)}
+            />
+        </InputContainer>
     );
 };
 
