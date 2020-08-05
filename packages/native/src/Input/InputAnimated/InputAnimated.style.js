@@ -14,9 +14,8 @@ export const InputContainer = styled.View`
 export const InputBackground = styled.View`
     position: absolute;
     z-index:10;
-    left: ${props => props.theme.padding};
-    top: ${props => props.theme.padding};
-    padding: ${props => props.theme.margin};
+    left: 35px;
+    top: 35px;
     ${props => props.style};
 `;
 
@@ -29,6 +28,5 @@ export const Input = styled.TextInput`
     padding: ${props => props.theme.padding};
     margin: ${props => props.theme.margin};
     flex: 1;
-    min-height: 60px;
     ${props => props.style};
 `;

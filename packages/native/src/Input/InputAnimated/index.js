@@ -29,9 +29,7 @@ const InputAnimated = ({ hasError, textChange, style }) => {
                     ref={searchRef}
                     style={{
                         width: 20,
-                        height: 'auto',
-                        marginLeft: 1,
-                        marginTop: 1,
+                        height: 'auto'
                     }}
                     loop={false}
                     colorFilters={[{ keypath: 'search_animation', color: theme.color6 }]}
