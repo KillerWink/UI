@@ -11,12 +11,19 @@ export const InputContainer = styled.View`
     ${props => props.style};
 `;
 
-export const InputBackground = styled.View`
-    position: absolute;
+export const InputSpacing = styled.View`
+ position: absolute;
     z-index:10;
-    left: 35px;
-    top: 35px;
-    opacity: ${props => props.hideIcon ? 0 : 1}
+    margin: 0 ${props => props.theme.margin};
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    ${props => props.style};
+`;
+
+export const InputBackground = styled.View`
+    margin: 0 ${props => props.theme.padding};
+    display: ${props => props.hideIcon ? 'none' : 'flex'};
     ${props => props.style};
 `;
 

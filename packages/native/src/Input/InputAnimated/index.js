@@ -1,7 +1,7 @@
 import React, {useEffect, useRef, useState} from 'react';
 import { useTheme } from 'emotion-theming';
 import LottieView from "lottie-react-native";
-import { InputContainer, Input, InputBackground } from './InputAnimated.style';
+import { InputContainer, Input, InputBackground, InputSpacing } from './InputAnimated.style';
 import search from './searchani.json';
 
 const InputAnimated = ({ hasError, textChange, style }) => {
@@ -26,12 +26,14 @@ const InputAnimated = ({ hasError, textChange, style }) => {
 
     return (
         <InputContainer theme={theme} styles={style}>
+            <InputSpacing>
             <InputBackground hideIcon={hideIcon}>
                 <LottieView
                     ref={searchRef}
                     style={{
                         width: 20,
-                        height: 'auto'
+                        height: 'auto',
+                        opacity: hideIcon ? 0 : 1
                     }}
                     loop={false}
                     colorFilters={[{keypath: 'search_animation', color: theme.color6}]}
@@ -39,6 +41,7 @@ const InputAnimated = ({ hasError, textChange, style }) => {
                     source={search}
                 />
             </InputBackground>
+            </InputSpacing>
             <Input
                 theme={theme}
                 isFocused={isFocused}
