@@ -19,7 +19,7 @@ const parseHeight = (setHeight) => {
     return Number.isInteger(setHeight) ? setHeight : (height * (heightInt/100));
 };
 
-const HeaderScrollable = ({ globalScroll, style = {}, children, scrollDistanceHeight, height }) => {
+const HeaderScrollable = ({ globalScroll, style = {}, children, scrollDistanceHeight, height, StatusBarOptions }) => {
 
     const scrollDistance = scrollDistanceHeight ? scrollDistanceHeight : parseHeight(style.height);
 
@@ -41,6 +41,7 @@ const HeaderScrollable = ({ globalScroll, style = {}, children, scrollDistanceHe
                 ...ScrollProperties,
                 ...style
             }}
+            StatusBarOptions={StatusBarOptions}
             height={height}
         >
                 {children}

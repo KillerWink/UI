@@ -17,6 +17,7 @@ import { Margin, MarginHorizontal, MarginVertical } from './Helpers';
 import List from './List';
 import { AnimateItem, AnimateSelectedItem } from './AnimateList';
 import FlatScrollerView from './FlatScroll';
+import LineFlatList from './LineFlatList';
 
 export {
     Bootstrap,
@@ -45,5 +46,6 @@ export {
     List,
     AnimateItem,
     AnimateSelectedItem,
-    FlatScrollerView
+    FlatScrollerView,
+    LineFlatList
 };

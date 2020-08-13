@@ -8,6 +8,9 @@ const backgroundSelector = ({isFocused, hasError, theme}) => {
 };
 
 export const InputContainer = styled.View`
+    flex: 1;
+    flex-direction: row;
+    align-items: stretch;
     ${props => props.style};
 `;
 
@@ -34,7 +37,18 @@ export const Input = styled.TextInput`
     border-radius: ${ props => props.theme.borderRadiusSmall };
     font-size: ${ props => props.theme.small };
     padding: ${props => props.theme.padding};
-    margin: ${props => props.theme.margin};
-    flex: 1;
+    align-self: stretch;
+    flex: 6;
     ${props => props.style};
+`;
+
+export const InputButton = styled.View`
+    background-color:  ${props => props.theme.color1};
+    padding: ${props => props.theme.padding};
+    margin-left: ${props => props.theme.margin};
+    width: 25px;
+    flex: 1;
+    border-radius: ${ props => props.theme.borderRadiusSmall };
+    align-items: center;
+    justify-content: center;
 `;
