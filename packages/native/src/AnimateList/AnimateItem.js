@@ -67,6 +67,7 @@ export default function AnimateItem({ children, duration, direction = 'bottomUp'
         <Animated.View
             style={
                 transformY ? [{
+                        flex: 1,
                         transform: [{
                             translateY: trans,
                         }]
@@ -74,6 +75,7 @@ export default function AnimateItem({ children, duration, direction = 'bottomUp'
                     :
                     [
                         {
+                            flex: 1,
                             transform: [{
                                 translateX: trans,
                             }]

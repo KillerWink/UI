@@ -12,9 +12,10 @@ const Button = ({ children, color = '#5E5E5E', style }) => {
     );
 };
 
-Button.Animated = ({ children, color = '#5E5E5E', styles }) => {
+Button.Animated = (props) => {
+    const { children, color = '#5E5E5E', styles } = props;
     return (
-        <ButtonAnimated color={color} styles={styles}>
+        <ButtonAnimated {...props} color={color} styles={styles}>
             { children }
         </ButtonAnimated>
     );

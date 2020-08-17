@@ -5,21 +5,20 @@ import {AnimateSelectedItem} from "../../AnimateList";
 
 const Item = ({ item, ListItems, style, setSelected, selectedState, topCorners, bottomCorners = false, lineColor, index, loading, selectedColor, theme }) => {
     const [ selectedStateChild, setSelectedStateChild ] = useState(selectedState);
-    const [ animateChild, setAnimateChild ] = useState(true);
 
     useEffect(() => {
         setSelectedStateChild(selectedState ? index : selectedState);
-        setAnimateChild(!selectedState);
     }, [selectedState]);
 
-    useEffect(() => {
-        selectedStateChild === index && setSelected(selectedStateChild, item);
-    }, [selectedStateChild]);
+
+    const selectItemManyTimes = (index) => {
+        setSelectedStateChild(index);
+        setSelected(selectedStateChild, item);
+    }
 
     return (
-        <ItemWrapperButton onPress={() => item.active && setSelectedStateChild(index)}>
+        <ItemWrapperButton onPress={() => item.active && selectItemManyTimes(index)}>
             <View>
-            <AnimateSelectedItem animate={animateChild} selectedState={selectedStateChild === index}>
             <ItemWrapper
                 loading={loading}
                 isActive={item.active}
@@ -33,7 +32,6 @@ const Item = ({ item, ListItems, style, setSelected, selectedState, topCorners, 
             >
                 <ListItems {...item} isSelected={selectedStateChild === index} />
             </ItemWrapper>
-            </AnimateSelectedItem>
             </View>
         </ItemWrapperButton>
     );

@@ -4,13 +4,12 @@ import LottieView from "lottie-react-native";
 import { InputContainer, Input, InputBackground, InputSpacing, InputButton } from './InputSend.style';
 import send from './send.json';
 
-const InputBtn = ({ hasError, textChange, style, placeholder, shouldFocused }) => {
+const InputBtn = ({ hasError, textChange, style, placeholder, shouldFocused, onSubmit }) => {
     const theme = useTheme();
     const sendRef = useRef();
     const inputRef = useRef();
     const [isFocused, setIsFocused] = useState(false);
     const [hasText, setHasText] = useState(false);
-    const [hideIcon, setHideIcon] = useState(false);
 
     useEffect(() => {
         if(shouldFocused) inputRef.current.focus();
@@ -24,6 +23,7 @@ const InputBtn = ({ hasError, textChange, style, placeholder, shouldFocused }) =
                 ref={inputRef}
                 isFocused={isFocused}
                 hasError={hasError}
+                value={hasText}
                 onChangeText={text => {
                     textChange(text);
                     setHasText(text || false);
@@ -31,7 +31,12 @@ const InputBtn = ({ hasError, textChange, style, placeholder, shouldFocused }) =
                 onFocus={() => setIsFocused(true)}
                 onBlur={() => setIsFocused(false)}
             />
-            <InputButton>
+            <InputButton hasText={hasText} onPress={() => {
+                if(hasText) onSubmit();
+                inputRef.current.blur();
+                setHasText(false);
+            }
+            }>
                 <LottieView
                     ref={sendRef}
                     style={{

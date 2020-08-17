@@ -2,13 +2,15 @@ import React, { useState } from 'react';
 import { useTheme } from 'emotion-theming';
 import { InputContainer, Input } from './InputDefault.style';
 
-const InputDefault = ({ hasError, textChange, style }) => {
+const InputDefault = ({ hasError, textChange, style, placeholder }) => {
     const theme = useTheme();
     const [isFocused, setIsFocused] = useState(false);
 
     return (
         <InputContainer theme={theme} style={style}>
             <Input
+                placeholder={placeholder}
+                style={style}
                 theme={theme}
                 isFocused={isFocused}
                 hasError={hasError}

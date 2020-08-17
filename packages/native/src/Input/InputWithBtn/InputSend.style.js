@@ -42,8 +42,8 @@ export const Input = styled.TextInput`
     ${props => props.style};
 `;
 
-export const InputButton = styled.View`
-    background-color:  ${props => props.theme.color1};
+export const InputButton = styled.TouchableOpacity`
+    background-color: ${props => props.hasText ? props.theme.color1 : props.theme.color9};
     padding: ${props => props.theme.padding};
     margin-left: ${props => props.theme.margin};
     width: 25px;

@@ -8,18 +8,20 @@ const backgroundSelector = ({isFocused, hasError, theme}) => {
 };
 
 export const InputContainer = styled.View`
+    flex: 1;
+    flex-direction: row;
+    align-items: stretch;
     ${props => props.style};
 `;
 
 export const Input = styled.TextInput`
-    background-color: ${props => props.isFocused ? props.theme.color5 : props.theme.color7};
+    background-color: ${props => props.theme.color5};
     border-width: 3px;
     border-color: ${ props => backgroundSelector(props) };
     border-radius: ${ props => props.theme.borderRadiusSmall };
     font-size: ${ props => props.theme.small };
     padding: ${props => props.theme.padding};
-    margin: ${props => props.theme.margin};
-    flex: 1;
-    min-height: 60px;
+    align-self: stretch;
+    flex: 6;
     ${props => props.style};
 `;

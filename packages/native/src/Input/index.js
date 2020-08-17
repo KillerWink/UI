@@ -12,9 +12,9 @@ const Input = ({ children }) => {
     );
 };
 
-Input.Default = ({ hasError, textChange, style }) => {
+Input.Default = ({ hasError, textChange, style, placeholder }) => {
     return (
-        <InputDefault hasError={hasError} textChange={textChange} style={style} />
+        <InputDefault hasError={hasError} textChange={textChange} style={style} placeholder={placeholder} />
     );
 };
 
@@ -24,9 +24,9 @@ Input.Search = ({ hasError, textChange, style, placeholder }) => {
     );
 };
 
-Input.Btn = ({ hasError, textChange, style, placeholder, shouldFocused }) => {
+Input.Btn = ({ hasError, textChange, style, placeholder, shouldFocused, onSubmit }) => {
     return (
-        <InputBtn hasError={hasError} textChange={textChange} style={style} placeholder={placeholder} shouldFocused={shouldFocused} />
+        <InputBtn hasError={hasError} textChange={textChange} style={style} placeholder={placeholder} shouldFocused={shouldFocused} onSubmit={onSubmit} />
     );
 };
 

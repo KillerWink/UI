@@ -1,5 +1,6 @@
 import styled from '@emotion/native';
 import { H3, H2 } from '../../Text';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const backgroundSelector = ({isSelected, isActive, theme, selectedColor = theme.color1}) => {
     if(isActive){
@@ -35,7 +36,7 @@ export const ItemWrapperWithCorners = styled.TouchableOpacity`
     ${props => props.style};
 `;
 
-export const ItemWrapperButton = styled.TouchableWithoutFeedback`
+export const ItemWrapperButton = styled(TouchableOpacity)`
 `;
 
 export const ItemWrapper = styled.View`
