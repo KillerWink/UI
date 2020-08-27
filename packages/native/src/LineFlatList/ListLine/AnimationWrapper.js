@@ -8,7 +8,7 @@ const AnimationWrapper = ({ children, duration }) => {
     useEffect(() => {
         Animated.timing(scaleValue, {
             toValue: 0,
-            duration : 350,
+            duration : 250,
             delay: duration,
             easing: Easing.out(Easing.exp),
             useNativeDriver: true
@@ -18,7 +18,9 @@ const AnimationWrapper = ({ children, duration }) => {
     return (
         <Animated.View style={{ transform : [{
                 translateY : scaleValue,
-            }]}}>
+            }],
+            flex: 1,
+        }}>
             { children }
         </Animated.View>
     );

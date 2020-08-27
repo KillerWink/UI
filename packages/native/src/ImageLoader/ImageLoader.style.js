@@ -5,6 +5,7 @@ export const ImageLoaderWrapper = styled.View`
     flex: 1;
     align-items: stretch;
     justify-content: center;
+    background-color: ${props => props.theme.color7};
 `;
 
 export const ImagePreload = styled(LottieView)`

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { useTheme } from 'emotion-theming';
 import LottieView from 'lottie-react-native';
 import { ImageLoaderWrapper, ImageComponent } from './ImageLoader.style';
-import loader from './assets/lottie20.json';
+import loader from './assets/loader.json';
 
 
 const ImageLoader = ({ imageUrl }) => {

@@ -1,8 +1,8 @@
 import React from 'react';
-import { TouchableOpacity } from 'react-native';
+import { Pressable } from 'react-native';
 import BottomNavItem from './BottomNavItem';
 
-const BottomNavController = ({ state, descriptors, navigation, children }) => {
+const BottomNavController = ({ state, descriptors, navigation }) => {
     return (
             state.routes.map((route, index) => {
                 const { options } = descriptors[route.key];
@@ -33,7 +33,7 @@ const BottomNavController = ({ state, descriptors, navigation, children }) => {
                 }
 
                 return (
-                    <TouchableOpacity
+                    <Pressable
                         accessibilityRole="button"
                         accessibilityStates={isFocused ? ['selected'] : []}
                         accessibilityLabel={options.tabBarAccessibilityLabel}
@@ -42,9 +42,10 @@ const BottomNavController = ({ state, descriptors, navigation, children }) => {
                         onLongPress={onLongPress}
                         style={{ alignSelf: 'stretch' }}
                         key={index}
+                        hitSlop={40}
                     >
                         <BottomNavItem isFocused={isFocused} TabElements={options.TabElements} />
-                    </TouchableOpacity>
+                    </Pressable>
                 );
             })
     );
