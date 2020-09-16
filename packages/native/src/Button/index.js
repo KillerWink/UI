@@ -1,6 +1,7 @@
 import React from 'react';
 import ButtonDefault from './ButtonDefault';
 import ButtonAnimated from './ButtonAnimated';
+import ButtonAnimatedFullWidth from './ButtonAnimatedFullWidth';
 import ButtonCustomCorners from './ButtonCustomCorners';
 import ButtonAutoPlay from './ButtonAutoPlay';
 
@@ -18,6 +19,15 @@ Button.Animated = (props) => {
         <ButtonAnimated {...props} color={color} styles={styles}>
             { children }
         </ButtonAnimated>
+    );
+};
+
+Button.AnimatedFullWidth = (props) => {
+    const { children, color = '#5E5E5E', styles } = props;
+    return (
+        <ButtonAnimatedFullWidth {...props} color={color} styles={styles}>
+            { children }
+        </ButtonAnimatedFullWidth>
     );
 };
 

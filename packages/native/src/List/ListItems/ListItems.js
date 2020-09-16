@@ -7,13 +7,7 @@ import DividerItem2 from './DividerItem2';
 import AnimationWrapper from './AnimationWrapper';
 
 const GhostArray = [{},{},{},{},{},{},{},{},{}];
-const ListItems = ({ items, loading, ListItems, style, ListFooterComponent, selectedFunction, lineColor, ListHeaderComponent, selectedColor }) => {
-    const [ selectedState, setSelectedState ] = useState(false);
-
-    const setSelected = (idx, item) => {
-        selectedFunction(item);
-        setSelectedState(idx);
-    };
+const ListItems = ({ items, loading, ListItems, style, ListFooterComponent, lineColor, ListHeaderComponent, selectedColor }) => {
 
     const returnDivider1 = ({divider1, index}) => {
         if(items[index - 1]){
@@ -55,9 +49,7 @@ const ListItems = ({ items, loading, ListItems, style, ListFooterComponent, sele
                     ListItems={ListItems}
                     item={item}
                     lineColor={lineColor}
-                    setSelected={setSelected}
                     selectedColor={selectedColor}
-                    selectedState={selectedState === index}
                 />
 
             </AnimationWrapper>
@@ -85,7 +77,6 @@ const ListItems = ({ items, loading, ListItems, style, ListFooterComponent, sele
             style={{ paddingHorizontal: 15, marginRight: lineColor ? 5 : 0 }}
             renderItem={renderItem}
             keyExtractor={(item, index) => { return index.toString() }}
-            extraData={selectedState}
             ListHeaderComponent={ListHeaderComponent}
             ListFooterComponent={ListFooterComponent}
         />

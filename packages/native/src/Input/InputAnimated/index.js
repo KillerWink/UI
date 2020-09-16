@@ -4,7 +4,7 @@ import LottieView from "lottie-react-native";
 import { InputContainer, Input, InputBackground, InputSpacing } from './InputAnimated.style';
 import search from './searchani.json';
 
-const InputAnimated = ({ hasError, textChange, style, placeholder }) => {
+const InputAnimated = ({ hasError, textChange, style, placeholder, ref }) => {
     const theme = useTheme();
     const searchRef = useRef();
     const [isFocused, setIsFocused] = useState(false);
@@ -43,6 +43,7 @@ const InputAnimated = ({ hasError, textChange, style, placeholder }) => {
             </InputBackground>
             </InputSpacing>
             <Input
+                ref={ref}
                 placeholder={placeholder}
                 theme={theme}
                 isFocused={isFocused}

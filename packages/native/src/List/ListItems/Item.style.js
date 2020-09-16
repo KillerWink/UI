@@ -35,7 +35,7 @@ export const ItemWrapperWithCorners = styled.TouchableOpacity`
     ${props => props.style};
 `;
 
-export const ItemWrapperButton = styled.TouchableWithoutFeedback`
+export const ItemWrapperButton = styled.View`
 `;
 
 export const ItemWrapper = styled.View`
@@ -49,7 +49,6 @@ export const ItemWrapper = styled.View`
     margin-left: ${props => props.lineColor && '10px'};
     border-left-width: ${props => props.lineColor && '3px'};
     border-color: ${props => props.lineColor && props.lineColor};
-    border-radius: ${props => props.isSelected ? '4px' : '0px' };
     ${props => props.style};
 `;
 

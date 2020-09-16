@@ -7,29 +7,29 @@ import DividerItem from './Divider';
 import AnimationWrapper from './AnimationWrapper';
 
 const GhostArray = [{},{},{},{},{},{},{},{},{}];
-const ListItems = ({ items, loading, ListItems, style, ListFooterComponent, selectedFunction, lineColor, ListHeaderComponent, selectedColor }) => {
+const ListItems = ({ items, loading, ListItems, style, ListFooterComponent, lineColor, ListHeaderComponent, selectedColor }) => {
     const theme = useTheme();
-    const [ selectedState, setSelectedState ] = useState(false);
 
-    const setSelected = (idx, item) => {
-        selectedFunction(item);
-        setSelectedState(idx);
-    };
-
-    const returnDivider = ({ dividerName, idx, index }) => {
+    const returnDivider = ({ dividerName, idx, index, dividerKey }) => {
         if(items[index - 1]){
-            return items[index - 1].Divider[idx].name !== dividerName;
+            return items[index - 1][dividerKey][idx].name !== dividerName;
         }
         return dividerName && true;
     };
 
     const renderItem = ({item, index}) => {
         return (
-            <AnimationWrapper duration={100 * (index + 1 >= 20 ? 1 : index + 1)}>
+            <AnimationWrapper duration={80 * (index + 1 >= 20 ? 1 : index + 1)}>
                 {
                     (item.Divider).map((itm, idx) => (
-                        returnDivider({ dividerName: itm.name, idx, index }) &&
-                        <DividerItem lineColor={lineColor} key={`${index}divider`} Divider={itm.value} />
+                        returnDivider({ dividerName: itm.name, idx, index, dividerKey: 'Divider' }) &&
+                        <DividerItem lineColor={lineColor} key={`${index}divider`} Divider={itm.value} name={itm.name} />
+                    ))
+                }
+                {
+                    (item.Divider2).map((itm, idx) => (
+                        returnDivider({ dividerName: itm.name, idx, index, dividerKey: 'Divider2' }) &&
+                        <DividerItem lineColor={lineColor} key={`${index}divider2`} Divider={itm.value} name={itm.name} />
                     ))
                 }
                 <Item
@@ -38,9 +38,7 @@ const ListItems = ({ items, loading, ListItems, style, ListFooterComponent, sele
                     item={item}
                     lineColor={lineColor}
                     theme={theme}
-                    setSelected={setSelected}
                     selectedColor={selectedColor}
-                    selectedState={selectedState === index}
                 />
 
             </AnimationWrapper>
@@ -67,7 +65,6 @@ const ListItems = ({ items, loading, ListItems, style, ListFooterComponent, sele
                 style={{ paddingHorizontal: parseInt(theme.padding.replace("px", "")) }}
                 renderItem={renderItem}
                 keyExtractor={(item, index) => { return index.toString() }}
-                extraData={selectedState}
                 ListHeaderComponent={ListHeaderComponent}
                 ListFooterComponent={ListFooterComponent}
             />

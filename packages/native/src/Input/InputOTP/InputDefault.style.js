@@ -21,6 +21,8 @@ export const Input = styled.TextInput`
     border-radius: ${ props => props.theme.borderRadiusSmall };
     font-size: ${ props => props.theme.small };
     padding: ${props => props.theme.padding};
+    margin: 0 ${props => props.theme.margin};
+    text-align: center;
     align-self: stretch;
     flex: 6;
     ${props => props.style};

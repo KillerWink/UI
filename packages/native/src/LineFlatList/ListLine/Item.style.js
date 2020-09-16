@@ -44,7 +44,6 @@ export const ItemWrapper = styled.View`
     align-items: ${props => props.isSelected ? 'center' : 'flex-end' };
     justify-content: flex-start;
     flex-direction: row;
-    padding: ${props => props.theme.margin} 0;
     background-color: ${ props => backgroundSelector(props) };
     margin-left: ${props => props.theme.padding};
     border-left-width: ${props => props.lineColor && '1px'};
@@ -75,8 +74,6 @@ export const DividerItem1Text = styled(H3)`
 
 export const DividerItemWrapper = styled.View`
     flex: 1;
-    padding: ${props => props.theme.padding};
-    padding-bottom: 0;
     ${props => props.style};
 `;
 
