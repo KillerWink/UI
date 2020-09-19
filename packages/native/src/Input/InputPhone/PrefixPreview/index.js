@@ -20,7 +20,7 @@ export default function UserDetailsForm({country, openPrefixModal}) {
 
   return (
     <PrefixWrapper onPress={() => openPrefixModal()}>
-      <PrefixFlag source={countryData.flag} />
+      <PrefixFlag source={{uri: countryData.flag }} />
       <PrefixCaret>
         <Caret color={theme.color6} />
       </PrefixCaret>

@@ -4,6 +4,7 @@ import ButtonAnimated from './ButtonAnimated';
 import ButtonAnimatedFullWidth from './ButtonAnimatedFullWidth';
 import ButtonCustomCorners from './ButtonCustomCorners';
 import ButtonAutoPlay from './ButtonAutoPlay';
+import BtnNormal from "./ButtonNormal";
 
 const Button = ({ children, color = '#5E5E5E', style }) => {
     return (
@@ -45,6 +46,15 @@ Button.Cornered = ({ children, style }) => {
         <ButtonCustomCorners style={style}>
             { children }
         </ButtonCustomCorners>
+    );
+};
+
+Button.Normal = (props) => {
+    const { children, color = '#5E5E5E', styles } = props;
+    return (
+        <BtnNormal {...props} color={color} styles={styles}>
+            { children }
+        </BtnNormal>
     );
 };
 

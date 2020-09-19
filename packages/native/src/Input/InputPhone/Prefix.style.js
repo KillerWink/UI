@@ -19,6 +19,7 @@ export const PrefixInputWrapper = styled.View`
 export const PhoneInput = styled.TextInput`
   flex: 1;
   min-height: 80px;
+  font-family: ${props => props.theme.fontFamily1};
     border-radius: ${ props => props.theme.borderRadiusSmall };
     font-size: ${ props => props.theme.small };
     padding: 0 ${props => props.theme.padding};

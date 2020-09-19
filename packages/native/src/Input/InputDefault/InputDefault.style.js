@@ -16,6 +16,7 @@ export const InputContainer = styled.View`
 
 export const Input = styled.TextInput`
     background-color: ${props => props.theme.color5};
+    font-family: ${props => props.theme.fontFamily1};
     border-width: 1px;
     border-color: ${ props => backgroundSelector(props) };
     border-radius: ${ props => props.theme.borderRadiusSmall };
