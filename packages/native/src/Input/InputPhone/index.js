@@ -3,7 +3,7 @@ import PrefixPreview from './PrefixPreview';
 import {PrefixInputWrapper, PhoneInput} from './Prefix.style';
 import {useTheme} from "emotion-theming";
 
-export default function PrefixGetCountry({country, placeholder, style, hasError, textChange, openPrefixModal, ref}) {
+export default function PrefixGetCountry({country, placeholder, style, hasError, textChange, openPrefixModal, ref, value}) {
     const [isFocused, setIsFocused] = useState(false);
     const theme = useTheme();
     return (
@@ -19,6 +19,7 @@ export default function PrefixGetCountry({country, placeholder, style, hasError,
                 onChangeText={text => textChange(text)}
                 onFocus={() => setIsFocused(true)}
                 onBlur={() => setIsFocused(false)}
+                value={value}
             />
         </PrefixInputWrapper>
     );

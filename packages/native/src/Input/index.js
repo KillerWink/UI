@@ -5,6 +5,7 @@ import InputAnimated from './InputAnimated';
 import InputBtn from './InputWithBtn';
 import InputPhone from './InputPhone';
 import InputOTP from './InputOTP';
+import InputNoEdit from './NoEdit';
 
 const Input = ({ children }) => {
     return (
@@ -14,9 +15,9 @@ const Input = ({ children }) => {
     );
 };
 
-Input.Default = ({ hasError, textChange, style, placeholder, ref, keyboardType, autoCapitalize }) => {
+Input.Default = ({ hasError, textChange, style, placeholder, ref, keyboardType, autoCapitalize, value }) => {
     return (
-        <InputDefault hasError={hasError} textChange={textChange} style={style} placeholder={placeholder} ref={ref} keyboardType={keyboardType} autoCapitalize={autoCapitalize} />
+        <InputDefault hasError={hasError} textChange={textChange} style={style} placeholder={placeholder} ref={ref} keyboardType={keyboardType} autoCapitalize={autoCapitalize} value={value} />
     );
 };
 
@@ -26,15 +27,15 @@ Input.InputOTP = ({ hasError, textChange, style, submitCode, autoCapitalize }) =
     );
 };
 
-Input.Phone = ({ country, hasError, textChange, style, placeholder, openPrefixModal, ref }) => {
+Input.Phone = ({ country, hasError, textChange, style, placeholder, openPrefixModal, ref, value }) => {
     return (
-        <InputPhone openPrefixModal={openPrefixModal} country={country} hasError={hasError} textChange={textChange} style={style} placeholder={placeholder} ref={ref} />
+        <InputPhone openPrefixModal={openPrefixModal} country={country} hasError={hasError} textChange={textChange} style={style} placeholder={placeholder} ref={ref} value={value} />
     );
 };
 
-Input.Search = ({ hasError, textChange, style, placeholder, ref }) => {
+Input.Search = ({ hasError, textChange, style, placeholder, ref, value }) => {
     return (
-        <InputAnimated hasError={hasError} textChange={textChange} style={style} placeholder={placeholder} ref={ref} />
+        <InputAnimated hasError={hasError} textChange={textChange} style={style} placeholder={placeholder} ref={ref} value={value} />
     );
 };
 
@@ -43,5 +44,12 @@ Input.Btn = ({ hasError, textChange, style, placeholder, shouldFocused, onSubmit
         <InputBtn hasError={hasError} textChange={textChange} style={style} placeholder={placeholder} shouldFocused={shouldFocused} onSubmit={onSubmit} />
     );
 };
+
+Input.InputNoEdit = ({ style, placeholder, shouldFocused, savedValue }) => {
+    return (
+        <InputNoEdit style={style} placeholder={placeholder} shouldFocused={shouldFocused} savedValue={savedValue}  />
+    );
+};
+
 
 export default Input;

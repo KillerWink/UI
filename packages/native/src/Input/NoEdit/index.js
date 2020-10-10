@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useTheme } from 'emotion-theming';
-import { InputContainer, Input } from './InputDefault.style';
+import { InputContainer, Input } from './NoEdit.style';
 
-const InputDefault = ({ hasError, textChange, style, placeholder, ref, keyboardType, autoCapitalize, value }) => {
+const InputNoEdit = ({ savedValue, style, placeholder, ref, keyboardType, autoCapitalize }) => {
     const theme = useTheme();
     const [isFocused, setIsFocused] = useState(false);
 
@@ -16,14 +16,9 @@ const InputDefault = ({ hasError, textChange, style, placeholder, ref, keyboardT
                 theme={theme}
                 keyboardType={keyboardType}
                 isFocused={isFocused}
-                hasError={hasError}
-                onChangeText={text => textChange(text)}
-                onFocus={() => setIsFocused(true)}
-                onBlur={() => setIsFocused(false)}
-                value={value}
-            />
+            >{savedValue}</Input>
         </InputContainer>
     );
 };
 
-export default InputDefault;
+export default InputNoEdit;
