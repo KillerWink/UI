@@ -20,9 +20,6 @@ export const InputContainer = styled.View`
 
 export const Input = styled.Text`
     font-family: ${props => props.theme.fontFamily1};
-    border-width: 1px;
-    border-color: ${ props => backgroundSelector(props) };
-    border-radius: ${ props => props.theme.borderRadiusSmall };
     font-size: ${ props => props.theme.small };
     padding: ${props => props.theme.padding};
     ${props => props.style};
