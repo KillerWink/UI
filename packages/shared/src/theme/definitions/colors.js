@@ -24,6 +24,6 @@ const colors = {
     color13d: '#292157',
     color14: '#f5f5fa',
     color15: '#f7f6f3',
-    color16: '#F9F9F9',
+    color16: '#f9f9f9',
 };
 export default colors;

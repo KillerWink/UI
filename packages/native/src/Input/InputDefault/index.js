@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useTheme } from 'emotion-theming';
 import { InputContainer, Input } from './InputDefault.style';
 
-const InputDefault = ({ hasError, textChange, style, placeholder, ref, keyboardType, autoCapitalize, value }) => {
+const InputDefault = ({ hasError, textChange, style, placeholder, ref, keyboardType, autoCapitalize, value, multiline, numberOfLines, maxLength }) => {
     const theme = useTheme();
     const [isFocused, setIsFocused] = useState(false);
 
@@ -21,6 +21,9 @@ const InputDefault = ({ hasError, textChange, style, placeholder, ref, keyboardT
                 onFocus={() => setIsFocused(true)}
                 onBlur={() => setIsFocused(false)}
                 value={value}
+                multiline={multiline}
+                numberOfLines={numberOfLines}
+                maxLength={maxLength}
             />
         </InputContainer>
     );
