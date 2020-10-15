@@ -1,6 +1,6 @@
 {
   "name": "@killerui/shared",
-  "version": "0.12.14",
+  "version": "0.12.16",
   "description": "shared code between web and native",
   "keywords": [
     "shared",
