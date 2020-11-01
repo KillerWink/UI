@@ -13,7 +13,6 @@ const H1Text = ({ children, style, align='left', color }) => {
 };
 
 H1Text.propTypes = {
-    children: PropTypes.string,
     style: PropTypes.object,
 };
 

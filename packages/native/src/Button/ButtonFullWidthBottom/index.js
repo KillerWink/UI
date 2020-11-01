@@ -1,11 +1,10 @@
 import React, {useState, useEffect} from 'react';
 import {Keyboard} from 'react-native';
-import { useTheme } from 'emotion-theming';
-import { NavContainer } from './BottomNavBar.style';
-import BottomNavController from './BottomNavController';
-import { SafeAreaView } from 'react-native';
+import {ButtonNormal} from './ButtonFullWidthBottom.style';
+import {useTheme} from "emotion-theming";
 
-const BottomNavBar = (props) => {
+const BtnFullBottom = (props) => {
+    const { children, styles, active } = props;
     const theme = useTheme();
     const [isFocused, setIsFocused] = useState(false);
 
@@ -28,18 +27,12 @@ const BottomNavBar = (props) => {
         };
     }, []);
 
-    const { children, style } = props;
     if(isFocused) return null;
     return (
-        <SafeAreaView>
-            <NavContainer theme={theme} style={style}>
-                <BottomNavController {...props}>
-                    {children}
-                </BottomNavController>
-            </NavContainer>
-        </SafeAreaView>
+        <ButtonNormal active={active} theme={theme} {...props} styles={styles}>
+            {children}
+        </ButtonNormal>
     );
 };
 
-
-export default BottomNavBar;
+export default BtnFullBottom;

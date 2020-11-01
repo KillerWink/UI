@@ -13,7 +13,6 @@ const SpanText = ({ children, style, align='left', color }) => {
 };
 
 SpanText.propTypes = {
-    children: PropTypes.string,
     style: PropTypes.object,
 };
 

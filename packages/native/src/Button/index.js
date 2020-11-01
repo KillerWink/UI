@@ -5,6 +5,7 @@ import ButtonAnimatedFullWidth from './ButtonAnimatedFullWidth';
 import ButtonCustomCorners from './ButtonCustomCorners';
 import ButtonAutoPlay from './ButtonAutoPlay';
 import BtnNormal from "./ButtonNormal";
+import BtnFullBottom from "./ButtonFullWidthBottom";
 
 const Button = ({ children, color = '#5E5E5E', style }) => {
     return (
@@ -55,6 +56,15 @@ Button.Normal = (props) => {
         <BtnNormal {...props} color={color} styles={styles}>
             { children }
         </BtnNormal>
+    );
+};
+
+Button.BtnFullBottom = (props) => {
+    const { children, color = '#5E5E5E', styles, active } = props;
+    return (
+        <BtnFullBottom {...props} color={color} styles={styles} active={active}>
+            { children }
+        </BtnFullBottom>
     );
 };
 

@@ -13,7 +13,6 @@ const pText = ({ children, style, align='left', color }) => {
 };
 
 pText.propTypes = {
-    children: PropTypes.string,
     style: PropTypes.object,
 };
 
