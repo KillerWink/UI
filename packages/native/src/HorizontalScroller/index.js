@@ -1,12 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { View } from 'react-native';
 import { useTheme } from 'emotion-theming';
 import { ScrollView } from 'react-native-gesture-handler';
 import { ScrollWrapper } from './HorizontalScroller.style';
 
-const HorizontalScroll = ({ preview = 0, children }) => {
+const HorizontalScroll = ({ preview = 0, children, scrollToPosition=false }) => {
     const [childPreviewWidth, setChildPreviewWidth] = useState([]);
     const theme = useTheme();
+    const scrollRef = React.useRef();
 
     const onLayout = (event, index) => {
         const elementWidth = event.nativeEvent.layout.width;
@@ -14,11 +15,17 @@ const HorizontalScroll = ({ preview = 0, children }) => {
         const previewAdjustment = elementWidth - previewWidth;
 
         setChildPreviewWidth([...childPreviewWidth, elementWidth*(index+1) - previewAdjustment]);
+        scrollToPosition && scrollRef.current.scrollTo({x: scrollToPosition, y: 0, animated: true});
     };
+
+    useEffect(() => {
+        scrollRef.current.scrollTo({x: scrollToPosition, y: 0, animated: true});
+    }, [scrollToPosition]);
 
     return (
         <ScrollWrapper theme={theme}>
             <ScrollView
+                ref={scrollRef}
                 horizontal={true}
                 showsHorizontalScrollIndicator={false}
                 snapToAlignment='center'

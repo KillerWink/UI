@@ -4,7 +4,7 @@ import {ButtonNormal} from './ButtonFullWidthBottom.style';
 import {useTheme} from "emotion-theming";
 
 const BtnFullBottom = (props) => {
-    const { children, styles, active } = props;
+    const { children, styles, active, hideUnderKeyboard=true } = props;
     const theme = useTheme();
     const [isFocused, setIsFocused] = useState(false);
 
@@ -27,7 +27,7 @@ const BtnFullBottom = (props) => {
         };
     }, []);
 
-    if(isFocused) return null;
+    if(isFocused && hideUnderKeyboard) return null;
     return (
         <ButtonNormal active={active} theme={theme} {...props} styles={styles}>
             {children}

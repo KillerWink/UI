@@ -18,6 +18,8 @@ import List from './List';
 import { AnimateItem, AnimateSelectedItem } from './AnimateList';
 import FlatScrollerView from './FlatScroll';
 import LineFlatList from './LineFlatList';
+import MediaPlayer from './MediaPlayer';
+import Loader from './Loader';
 
 export {
     Bootstrap,
@@ -47,5 +49,7 @@ export {
     AnimateItem,
     AnimateSelectedItem,
     FlatScrollerView,
-    LineFlatList
+    LineFlatList,
+    MediaPlayer,
+    Loader
 };

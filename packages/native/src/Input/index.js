@@ -15,9 +15,9 @@ const Input = ({ children }) => {
     );
 };
 
-Input.Default = ({ hasError, textChange, style, placeholder, ref, keyboardType, autoCapitalize, value, multiline, numberOfLines, maxLength }) => {
+Input.Default = (props) => {
     return (
-        <InputDefault hasError={hasError} textChange={textChange} style={style} placeholder={placeholder} ref={ref} keyboardType={keyboardType} autoCapitalize={autoCapitalize} value={value} multiline={multiline} numberOfLines={numberOfLines} maxLength={maxLength} />
+        <InputDefault {...props} />
     );
 };
 

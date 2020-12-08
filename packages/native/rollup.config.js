@@ -36,7 +36,8 @@ export default {
                 '@killerwink/react-lottie-color' : '@killerwink/react-lottie-color',
                 'react-native-svg' : 'react-native-svg',
                 'react-native-status-bar-height' : 'react-native-status-bar-height',
-                'reanimated-easing' : 'Easing'
+                'reanimated-easing' : 'Easing',
+                'react-native-video' : 'react-native-video'
             },
         },
     ],
@@ -68,6 +69,7 @@ export default {
         'lottie-react-native',
         '@killerwink/react-lottie-color',
         'react-native-svg',
-        'react-native-status-bar-height'
+        'react-native-status-bar-height',
+        'react-native-video'
     ]
 };

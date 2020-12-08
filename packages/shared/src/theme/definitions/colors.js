@@ -25,5 +25,9 @@ const colors = {
     color14: '#f5f5fa',
     color15: '#f7f6f3',
     color16: '#f9f9f9',
+    color17: '#00cec9',
+    color18: '#a29bfe',
+    color19: '#fab1a0',
+    color20: '#55efc4',
 };
 export default colors;
