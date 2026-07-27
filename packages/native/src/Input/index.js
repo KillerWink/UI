@@ -6,6 +6,7 @@ import InputBtn from './InputWithBtn';
 import InputPhone from './InputPhone';
 import InputOTP from './InputOTP';
 import InputNoEdit from './NoEdit';
+import InputSecondary from './InputSecondary';
 
 const Input = ({ children }) => {
     return (
@@ -48,6 +49,12 @@ Input.Btn = ({ hasError, textChange, style, placeholder, shouldFocused, onSubmit
 Input.InputNoEdit = ({ style, placeholder, shouldFocused, savedValue }) => {
     return (
         <InputNoEdit style={style} placeholder={placeholder} shouldFocused={shouldFocused} savedValue={savedValue}  />
+    );
+};
+
+Input.Secondary = (props) => {
+    return (
+        <InputSecondary {...props} />
     );
 };
 

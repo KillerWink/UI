@@ -7,7 +7,7 @@ import DividerItem from './Divider';
 import AnimationWrapper from './AnimationWrapper';
 
 const GhostArray = [{},{},{},{},{},{},{},{},{}];
-const ListItems = ({ items, loading, ListItems, style, ListFooterComponent, lineColor, ListHeaderComponent, selectedColor }) => {
+const ListItems = ({ items, loading, ListItems, style, ListFooterComponent, lineColor, ListHeaderComponent, selectedColor, duration = 80 }) => {
     const theme = useTheme();
 
     const returnDivider = ({ dividerName, idx, index, dividerKey }) => {
@@ -19,7 +19,7 @@ const ListItems = ({ items, loading, ListItems, style, ListFooterComponent, line
 
     const renderItem = ({item, index}) => {
         return (
-            <AnimationWrapper duration={80 * (index + 1 >= 20 ? 1 : index + 1)}>
+            <AnimationWrapper duration={duration * (index + 1 >= 20 ? 1 : index + 1)}>
                 {
                     (item.Divider).map((itm, idx) => (
                         returnDivider({ dividerName: itm.name, idx, index, dividerKey: 'Divider' }) &&
@@ -27,7 +27,7 @@ const ListItems = ({ items, loading, ListItems, style, ListFooterComponent, line
                     ))
                 }
                 {
-                    (item.Divider2).map((itm, idx) => (
+                    item.Divider2 && (item.Divider2).map((itm, idx) => (
                         returnDivider({ dividerName: itm.name, idx, index, dividerKey: 'Divider2' }) &&
                         <DividerItem lineColor={lineColor} key={`${index}divider2`} Divider={itm.value} name={itm.name} />
                     ))
